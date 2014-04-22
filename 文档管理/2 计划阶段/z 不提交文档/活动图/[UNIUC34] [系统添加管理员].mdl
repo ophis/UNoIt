@@ -1,0 +1,614 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E559D3701B5"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E559D3701B7"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E559D3701C6"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E559D3701B6"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E559D3701B8"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E559D3D00EA"
+	    states     	(list States
+		(object State "无需其它用例进入"
+		    quid       	"4E559D97035B"
+		    type       	"StartState")
+		(object ActivityState "后台登录数据库"
+		    quid       	"4E559DAF0128")
+		(object ActivityState "在数据库中添加管理员的账号和密码"
+		    quid       	"4E559DC60109")
+		(object Decision "添加账号是否已存在"
+		    quid       	"4E559E0402BF")
+		(object Decision "管理员是否足够"
+		    quid       	"4E559E6B0271")
+		(object ActivityState "退出数据库"
+		    quid       	"4E559E910167")
+		(object State "$UNNAMED$0"
+		    quid       	"4E559F020186"
+		    type       	"EndState"))
+	    partitions 	(list Partitions
+		(object Partition "超级管理员"
+		    quid       	"4E559D7500FA"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E559D7B02AF"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E559DBB02BF"
+		    supplier   	"Logical View::State/Activity Model::后台登录数据库"
+		    supplier_quidu 	"4E559DAF0128"
+		    client     	"Logical View::State/Activity Model::无需其它用例进入"
+		    client_quidu 	"4E559D97035B"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559DBB02C2"))
+		(object State_Transition
+		    quid       	"4E559DE400CB"
+		    supplier   	"Logical View::State/Activity Model::在数据库中添加管理员的账号和密码"
+		    supplier_quidu 	"4E559DC60109"
+		    client     	"Logical View::State/Activity Model::后台登录数据库"
+		    client_quidu 	"4E559DAF0128"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559DE400CE"))
+		(object State_Transition
+		    quid       	"4E559E36007D"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::在数据库中添加管理员的账号和密码"
+		    supplier_quidu 	"4E559DC60109"
+		    client     	"Logical View::State/Activity Model::添加账号是否已存在"
+		    client_quidu 	"4E559E0402BF"
+		    Event      	(object Event "是"
+			quid       	"4E559E36007E")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559E360080"))
+		(object State_Transition
+		    quid       	"4E559E800213"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::管理员是否足够"
+		    supplier_quidu 	"4E559E6B0271"
+		    client     	"Logical View::State/Activity Model::添加账号是否已存在"
+		    client_quidu 	"4E559E0402BF"
+		    Event      	(object Event "否"
+			quid       	"4E559E800214")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559E800216"))
+		(object State_Transition
+		    quid       	"4E559E9A0213"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::退出数据库"
+		    supplier_quidu 	"4E559E910167"
+		    client     	"Logical View::State/Activity Model::管理员是否足够"
+		    client_quidu 	"4E559E6B0271"
+		    Event      	(object Event "是"
+			quid       	"4E559E9A0214")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559E9A0216"))
+		(object State_Transition
+		    quid       	"4E559EB40290"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::在数据库中添加管理员的账号和密码"
+		    supplier_quidu 	"4E559DC60109"
+		    client     	"Logical View::State/Activity Model::管理员是否足够"
+		    client_quidu 	"4E559E6B0271"
+		    Event      	(object Event "否"
+			quid       	"4E559EB40291")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559EB40293"))
+		(object State_Transition
+		    quid       	"4E559EF0003E"
+		    supplier   	"Logical View::State/Activity Model::添加账号是否已存在"
+		    supplier_quidu 	"4E559E0402BF"
+		    client     	"Logical View::State/Activity Model::在数据库中添加管理员的账号和密码"
+		    client_quidu 	"4E559DC60109"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559EF00041"))
+		(object State_Transition
+		    quid       	"4E559F08038A"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"4E559F020186"
+		    client     	"Logical View::State/Activity Model::退出数据库"
+		    client_quidu 	"4E559E910167"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559F08038D")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC34] [系统添加管理员]"
+		    quid       	"4E559D3D00FA"
+		    title      	"[UNIUC34] [系统添加管理员]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object Swimlane "超级管理员" @1
+			    line_color 	3342489
+			    quidu      	"4E559D7500FA"
+			    width      	664)
+			(object StateView "StartState" "无需其它用例进入" @2
+			    Parent_View 	@1
+			    location   	(331, 198)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(373, 168)
+				nlines     	2
+				max_width  	600
+				label      	"无需其它用例进入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E559D97035B"
+			    autoResize 	TRUE)
+			(object ActivityStateView "后台登录数据库" @3
+			    Parent_View 	@1
+			    location   	(331, 512)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(331, 515)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"后台登录数据库")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559DAF0128"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559DBB02BF"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "在数据库中添加管理员的账号和密码" @5
+			    Parent_View 	@1
+			    location   	(333, 866)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@5
+				location   	(333, 869)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	428
+				justify    	0
+				label      	"在数据库中添加管理员的账号和密码")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559DC60109"
+			    width      	542
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @6
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559DE400CB"
+			    client     	@3
+			    supplier   	@5
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "系统" @7
+			    location   	(664, 0)
+			    line_color 	3342489
+			    quidu      	"4E559D7B02AF"
+			    width      	1156)
+			(object DecisionView "添加账号是否已存在" @8
+			    Parent_View 	@7
+			    location   	(944, 1269)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@8
+				location   	(1000, 1220)
+				nlines     	2
+				max_width  	300
+				label      	"添加账号是否已存在")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559E0402BF"
+			    autoResize 	TRUE)
+			(object TransView "" @9
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(1415, 1315)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.209524
+				height     	46
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559E36007D"
+			    client     	@8
+			    supplier   	@5
+			    vertices   	(list Points
+				(1019, 1269)
+				(1538, 1269)
+				(1538, 866)
+				(570, 866))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @11
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559EF0003E"
+			    client     	@5
+			    supplier   	@8
+			    vertices   	(list Points
+				(332, 924)
+				(331, 1031)
+				(944, 1031)
+				(944, 1232))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "管理员是否足够" @12
+			    Parent_View 	@7
+			    location   	(944, 1569)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@12
+				location   	(1000, 1520)
+				nlines     	2
+				max_width  	300
+				label      	"管理员是否足够")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559E6B0271"
+			    autoResize 	TRUE)
+			(object TransView "" @13
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @14
+				Parent_View 	@13
+				location   	(989, 1419)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559E800213"
+			    client     	@8
+			    supplier   	@12
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @15
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @16
+				Parent_View 	@15
+				location   	(1437, 1625)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.190868
+				height     	56
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559EB40290"
+			    client     	@12
+			    supplier   	@5
+			    vertices   	(list Points
+				(1019, 1569)
+				(1538, 1569)
+				(1538, 866)
+				(570, 866))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "退出数据库" @17
+			    Parent_View 	@7
+			    location   	(943, 1887)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@17
+				location   	(943, 1890)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"退出数据库")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559E910167"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @18
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @19
+				Parent_View 	@18
+				location   	(989, 1717)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559E9A0213"
+			    client     	@12
+			    supplier   	@17
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$0" @20
+			    Parent_View 	@7
+			    location   	(943, 2210)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@20
+				location   	(997, 2168)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E559F020186"
+			    autoResize 	TRUE)
+			(object Swimlane "" @21
+			    location   	(1820, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @22
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559F08038A"
+			    client     	@17
+			    supplier   	@20
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E559D3701BC"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E559D3701B8"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E559D3701C5"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E559D3701B6")
+    process_structure 	(object Processes
+	quid       	"4E559D3701B9"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E559D3701BB"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E559D3701BA"))

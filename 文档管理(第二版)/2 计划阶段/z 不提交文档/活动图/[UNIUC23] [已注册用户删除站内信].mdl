@@ -1,0 +1,498 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E55A6730186"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E55A6730188"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E55A6730198"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E55A6730187"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E55A6730189"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E55A67802CE"
+	    states     	(list States
+		(object State "由用户登录用例进入"
+		    quid       	"4E55A6C60167"
+		    type       	"StartState")
+		(object ActivityState "进入个人 主页"
+		    quid       	"4E55A6D80000")
+		(object ActivityState "选择站内信管理"
+		    quid       	"4E55A6EC0251")
+		(object ActivityState "选择所需站内信"
+		    quid       	"4E55A70A0138")
+		(object ActivityState "点击删除"
+		    quid       	"4E55A72503B9")
+		(object ActivityState "点击确定"
+		    quid       	"4E55A73300FA")
+		(object ActivityState "弹出成功删除信息"
+		    quid       	"4E55A7440290")
+		(object State "$UNNAMED$0"
+		    quid       	"4E55A76401B5"
+		    type       	"EndState"))
+	    partitions 	(list Partitions
+		(object Partition "用户"
+		    quid       	"4E55A6B30203"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E55A6B70167"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E55A6E10290"
+		    supplier   	"Logical View::State/Activity Model::进入个人 主页"
+		    supplier_quidu 	"4E55A6D80000"
+		    client     	"Logical View::State/Activity Model::由用户登录用例进入"
+		    client_quidu 	"4E55A6C60167"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A6E10293"))
+		(object State_Transition
+		    quid       	"4E55A7000128"
+		    supplier   	"Logical View::State/Activity Model::选择站内信管理"
+		    supplier_quidu 	"4E55A6EC0251"
+		    client     	"Logical View::State/Activity Model::进入个人 主页"
+		    client_quidu 	"4E55A6D80000"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A700012B"))
+		(object State_Transition
+		    quid       	"4E55A7160148"
+		    supplier   	"Logical View::State/Activity Model::选择所需站内信"
+		    supplier_quidu 	"4E55A70A0138"
+		    client     	"Logical View::State/Activity Model::选择站内信管理"
+		    client_quidu 	"4E55A6EC0251"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A716014B"))
+		(object State_Transition
+		    quid       	"4E55A72F0167"
+		    supplier   	"Logical View::State/Activity Model::点击删除"
+		    supplier_quidu 	"4E55A72503B9"
+		    client     	"Logical View::State/Activity Model::选择所需站内信"
+		    client_quidu 	"4E55A70A0138"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A72F016A"))
+		(object State_Transition
+		    quid       	"4E55A73A03C8"
+		    supplier   	"Logical View::State/Activity Model::点击确定"
+		    supplier_quidu 	"4E55A73300FA"
+		    client     	"Logical View::State/Activity Model::点击删除"
+		    client_quidu 	"4E55A72503B9"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A73A03CB"))
+		(object State_Transition
+		    quid       	"4E55A75B0109"
+		    supplier   	"Logical View::State/Activity Model::弹出成功删除信息"
+		    supplier_quidu 	"4E55A7440290"
+		    client     	"Logical View::State/Activity Model::点击确定"
+		    client_quidu 	"4E55A73300FA"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A75B010C"))
+		(object State_Transition
+		    quid       	"4E55A7680261"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"4E55A76401B5"
+		    client     	"Logical View::State/Activity Model::弹出成功删除信息"
+		    client_quidu 	"4E55A7440290"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A7680264")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC23] [已注册用户删除站内信]"
+		    quid       	"4E55A67802DE"
+		    title      	"[UNIUC23] [已注册用户删除站内信]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	888
+		    items      	(list diagram_item_list
+			(object Swimlane "用户" @1
+			    line_color 	3342489
+			    quidu      	"4E55A6B30203"
+			    width      	722)
+			(object StateView "StartState" "由用户登录用例进入" @2
+			    Parent_View 	@1
+			    location   	(344, 222)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(386, 192)
+				nlines     	2
+				max_width  	600
+				label      	"由用户登录用例进入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E55A6C60167"
+			    autoResize 	TRUE)
+			(object ActivityStateView "进入个人 主页" @3
+			    Parent_View 	@1
+			    location   	(343, 534)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(343, 537)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"进入个人 主页")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A6D80000"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A6E10290"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "选择站内信管理" @5
+			    Parent_View 	@1
+			    location   	(341, 832)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@5
+				location   	(341, 835)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"选择站内信管理")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A6EC0251"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @6
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A7000128"
+			    client     	@3
+			    supplier   	@5
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "选择所需站内信" @7
+			    Parent_View 	@1
+			    location   	(341, 1104)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@7
+				location   	(341, 1107)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"选择所需站内信")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A70A0138"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @8
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A7160148"
+			    client     	@5
+			    supplier   	@7
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "点击删除" @9
+			    Parent_View 	@1
+			    location   	(340, 1359)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@9
+				location   	(340, 1362)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"点击删除")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A72503B9"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @10
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A72F0167"
+			    client     	@7
+			    supplier   	@9
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "点击确定" @11
+			    Parent_View 	@1
+			    location   	(337, 1615)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@11
+				location   	(337, 1618)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"点击确定")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A73300FA"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @12
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A73A03C8"
+			    client     	@9
+			    supplier   	@11
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "系统" @13
+			    location   	(722, 0)
+			    line_color 	3342489
+			    quidu      	"4E55A6B70167"
+			    width      	756)
+			(object ActivityStateView "弹出成功删除信息" @14
+			    Parent_View 	@13
+			    location   	(1112, 1821)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@14
+				location   	(1112, 1824)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"弹出成功删除信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A7440290"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @15
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A75B0109"
+			    client     	@11
+			    supplier   	@14
+			    vertices   	(list Points
+				(337, 1674)
+				(337, 1820)
+				(937, 1820))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$0" @16
+			    Parent_View 	@13
+			    location   	(1114, 2082)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@16
+				location   	(1168, 2040)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E55A76401B5"
+			    autoResize 	TRUE)
+			(object Swimlane "" @17
+			    location   	(1478, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @18
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A7680261"
+			    client     	@14
+			    supplier   	@16
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E55A6730196"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E55A6730189"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E55A6730197"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E55A6730187")
+    process_structure 	(object Processes
+	quid       	"4E55A673018A"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E55A673018C"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E55A673018B"))

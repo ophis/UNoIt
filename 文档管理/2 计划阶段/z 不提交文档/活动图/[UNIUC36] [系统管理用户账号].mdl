@@ -1,0 +1,731 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E55941C038A"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E55941C038C"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E55941C0393"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E55941C038B"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E55941C038D"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E55942201E4"
+	    states     	(list States
+		(object State "$UNNAMED$0"
+		    quid       	"4E559AA000BB"
+		    type       	"StartState")
+		(object Decision "是否登录"
+		    quid       	"4E559AEA00AB")
+		(object ActivityState "密码修改"
+		    quid       	"4E559B2801E4")
+		(object ActivityState "新用户注册"
+		    quid       	"4E559B8A03D8")
+		(object ActivityState "提示注册账户已经存在"
+		    quid       	"4E559C1E0109")
+		(object ActivityState "数据库中写入账户信息"
+		    quid       	"4E559C6F02AF")
+		(object State "$UNNAMED$1"
+		    quid       	"4E559CC2035B"
+		    type       	"EndState")
+		(object ActivityState "更新数据库相关信息"
+		    quid       	"4E559CE4005D")
+		(object State "$UNNAMED$2"
+		    quid       	"4E559D0B00EA"
+		    type       	"EndState")
+		(object Decision "检查数据库中是否存在同名账户"
+		    quid       	"4E55AD16004E"))
+	    partitions 	(list Partitions
+		(object Partition "用户"
+		    quid       	"4E559A7E0280"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E559A830186"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E559AEF0000"
+		    supplier   	"Logical View::State/Activity Model::是否登录"
+		    supplier_quidu 	"4E559AEA00AB"
+		    client     	"$UNNAMED$0"
+		    client_quidu 	"4E559AA000BB"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559AEF0003"))
+		(object State_Transition
+		    quid       	"4E559B7A02CE"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::密码修改"
+		    supplier_quidu 	"4E559B2801E4"
+		    client     	"Logical View::State/Activity Model::是否登录"
+		    client_quidu 	"4E559AEA00AB"
+		    Event      	(object Event "是"
+			quid       	"4E559B7A02CF")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559B7A02D1"))
+		(object State_Transition
+		    quid       	"4E559B9C02BF"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::新用户注册"
+		    supplier_quidu 	"4E559B8A03D8"
+		    client     	"Logical View::State/Activity Model::是否登录"
+		    client_quidu 	"4E559AEA00AB"
+		    Event      	(object Event "否"
+			quid       	"4E559B9C02C0")
+		    sendEvent  	(object sendEvent
+			quid       	"4E559B9C02C2"))
+		(object State_Transition
+		    quid       	"4E559C5600FA"
+		    supplier   	"Logical View::State/Activity Model::新用户注册"
+		    supplier_quidu 	"4E559B8A03D8"
+		    client     	"Logical View::State/Activity Model::提示注册账户已经存在"
+		    client_quidu 	"4E559C1E0109"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559C5600FD"))
+		(object State_Transition
+		    quid       	"4E559CC60290"
+		    supplier   	"$UNNAMED$1"
+		    supplier_quidu 	"4E559CC2035B"
+		    client     	"Logical View::State/Activity Model::数据库中写入账户信息"
+		    client_quidu 	"4E559C6F02AF"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559CC60293"))
+		(object State_Transition
+		    quid       	"4E559CFC01E4"
+		    supplier   	"Logical View::State/Activity Model::更新数据库相关信息"
+		    supplier_quidu 	"4E559CE4005D"
+		    client     	"Logical View::State/Activity Model::密码修改"
+		    client_quidu 	"4E559B2801E4"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559CFC01E7"))
+		(object State_Transition
+		    quid       	"4E559D0E0261"
+		    supplier   	"$UNNAMED$2"
+		    supplier_quidu 	"4E559D0B00EA"
+		    client     	"Logical View::State/Activity Model::更新数据库相关信息"
+		    client_quidu 	"4E559CE4005D"
+		    sendEvent  	(object sendEvent
+			quid       	"4E559D0E0264"))
+		(object State_Transition
+		    quid       	"4E55AD5601B5"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::提示注册账户已经存在"
+		    supplier_quidu 	"4E559C1E0109"
+		    client     	"Logical View::State/Activity Model::检查数据库中是否存在同名账户"
+		    client_quidu 	"4E55AD16004E"
+		    Event      	(object Event "是"
+			quid       	"4E55AD5601B6")
+		    sendEvent  	(object sendEvent
+			quid       	"4E55AD5601B8"))
+		(object State_Transition
+		    quid       	"4E55AD710167"
+		    supplier   	"Logical View::State/Activity Model::检查数据库中是否存在同名账户"
+		    supplier_quidu 	"4E55AD16004E"
+		    client     	"Logical View::State/Activity Model::新用户注册"
+		    client_quidu 	"4E559B8A03D8"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55AD71016A"))
+		(object State_Transition
+		    quid       	"4E55AD8100DA"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::数据库中写入账户信息"
+		    supplier_quidu 	"4E559C6F02AF"
+		    client     	"Logical View::State/Activity Model::检查数据库中是否存在同名账户"
+		    client_quidu 	"4E55AD16004E"
+		    Event      	(object Event "否"
+			quid       	"4E55AD8100DB")
+		    sendEvent  	(object sendEvent
+			quid       	"4E55AD8100DD")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC36] [系统管理用户账号]"
+		    quid       	"4E55942201F4"
+		    title      	"[UNIUC36] [系统管理用户账号]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object Swimlane "用户" @1
+			    line_color 	3342489
+			    quidu      	"4E559A7E0280"
+			    width      	910)
+			(object StateView "StartState" "$UNNAMED$0" @2
+			    Parent_View 	@1
+			    location   	(328, 234)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(370, 204)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E559AA000BB"
+			    autoResize 	TRUE)
+			(object DecisionView "是否登录" @3
+			    Parent_View 	@1
+			    location   	(328, 590)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(384, 541)
+				nlines     	2
+				max_width  	300
+				label      	"是否登录")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559AEA00AB"
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559AEF0000"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "密码修改" @5
+			    Parent_View 	@1
+			    location   	(328, 1100)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@5
+				location   	(328, 1103)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"密码修改")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559B2801E4"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @6
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @7
+				Parent_View 	@6
+				location   	(373, 834)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559B7A02CE"
+			    client     	@3
+			    supplier   	@5
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "新用户注册" @8
+			    Parent_View 	@1
+			    location   	(650, 865)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@8
+				location   	(650, 868)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"新用户注册")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559B8A03D8"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @9
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(586, 696)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.764069
+				height     	65
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559B9C02BF"
+			    client     	@3
+			    supplier   	@8
+			    vertices   	(list Points
+				(403, 590)
+				(650, 591)
+				(650, 806))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "系统" @11
+			    location   	(910, 0)
+			    line_color 	3342489
+			    quidu      	"4E559A830186"
+			    width      	1382)
+			(object ActivityStateView "提示注册账户已经存在" @12
+			    Parent_View 	@11
+			    location   	(2030, 1222)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@12
+				location   	(2030, 1225)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"提示注册账户已经存在")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559C1E0109"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @13
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559C5600FA"
+			    client     	@12
+			    supplier   	@8
+			    vertices   	(list Points
+				(2030, 1162)
+				(2031, 866)
+				(824, 865))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "数据库中写入账户信息" @14
+			    Parent_View 	@11
+			    location   	(1216, 1559)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@14
+				location   	(1216, 1562)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"数据库中写入账户信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559C6F02AF"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object StateView "EndState" "$UNNAMED$1" @15
+			    Parent_View 	@11
+			    location   	(1218, 1875)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@15
+				location   	(1272, 1833)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E559CC2035B"
+			    autoResize 	TRUE)
+			(object TransView "" @16
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559CC60290"
+			    client     	@14
+			    supplier   	@15
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "更新数据库相关信息" @17
+			    Parent_View 	@11
+			    location   	(1223, 2060)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@17
+				location   	(1223, 2063)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"更新数据库相关信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E559CE4005D"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @18
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559CFC01E4"
+			    client     	@5
+			    supplier   	@17
+			    vertices   	(list Points
+				(328, 1159)
+				(329, 2059)
+				(1048, 2059))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$2" @19
+			    Parent_View 	@11
+			    location   	(1224, 2385)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@19
+				location   	(1278, 2343)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E559D0B00EA"
+			    autoResize 	TRUE)
+			(object TransView "" @20
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E559D0E0261"
+			    client     	@17
+			    supplier   	@19
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "检查数据库中是否存在同名账户" @21
+			    Parent_View 	@11
+			    location   	(1215, 1222)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@21
+				location   	(1271, 1173)
+				nlines     	2
+				max_width  	384
+				label      	"检查数据库中是否存在同名账户")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55AD16004E"
+			    autoResize 	TRUE)
+			(object Swimlane "" @22
+			    location   	(2292, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @23
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @24
+				Parent_View 	@23
+				location   	(1773, 1272)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.852989
+				height     	50
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55AD5601B5"
+			    client     	@21
+			    supplier   	@12
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @25
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55AD710167"
+			    client     	@8
+			    supplier   	@21
+			    vertices   	(list Points
+				(650, 924)
+				(650, 1222)
+				(1140, 1222))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @26
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(1260, 1380)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55AD8100DA"
+			    client     	@21
+			    supplier   	@14
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E55941C0391"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E55941C038D"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E55941C0392"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E55941C038B")
+    process_structure 	(object Processes
+	quid       	"4E55941C038E"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E55941C0390"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E55941C038F"))

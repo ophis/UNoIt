@@ -1,0 +1,3 @@
+项目计划编写要求：
+1、使用Microsoft Project Professional或更高版本软件制作
+2、以任务和资源及时间安排为主制定项目开发计划

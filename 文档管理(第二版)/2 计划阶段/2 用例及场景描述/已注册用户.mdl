@@ -1,0 +1,358 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E5A3213008C"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E5A3213008E"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "ÒÑ×¢²áÓÃ»§"
+		quid       	"4E5A3228033C"
+		stereotype 	"Actor")
+	    (object UseCase "ÍøÒ³µÇÂ½ÕËºÅ"
+		quid       	"4E5A323300FA")
+	    (object UseCase "¿Í»§¶ËµÇÂ½ÕËºÅ"
+		quid       	"4E5A3BF101D4")
+	    (object UseCase "È¡»ØÃÜÂë"
+		quid       	"4E5A3C010148")
+	    (object UseCase "NewUseCase"
+		quid       	"4E5A3DC6001F")
+	    (object Association "$UNNAMED$0"
+		quid       	"4E5A3DF9000F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"4E5A3DF90203"
+			supplier   	"Use Case View::ÍøÒ³µÇÂ½ÕËºÅ"
+			quidu      	"4E5A323300FA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"4E5A3DF90205"
+			supplier   	"Use Case View::ÒÑ×¢²áÓÃ»§"
+			quidu      	"4E5A3228033C")))
+	    (object Association "$UNNAMED$3"
+		quid       	"4E5A3DFC01A5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"4E5A3DFC037A"
+			supplier   	"Use Case View::¿Í»§¶ËµÇÂ½ÕËºÅ"
+			quidu      	"4E5A3BF101D4"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"4E5A3DFC037C"
+			supplier   	"Use Case View::ÒÑ×¢²áÓÃ»§"
+			quidu      	"4E5A3228033C")))
+	    (object Association "$UNNAMED$6"
+		quid       	"4E5A3E0200EA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"4E5A3E02036B"
+			supplier   	"Use Case View::È¡»ØÃÜÂë"
+			quidu      	"4E5A3C010148"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"4E5A3E02036D"
+			supplier   	"Use Case View::ÒÑ×¢²áÓÃ»§"
+			quidu      	"4E5A3228033C"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E5A3213009E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::ÍøÒ³µÇÂ½ÕËºÅ" @1
+			location   	(537, 1062)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(537, 1200)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"ÍøÒ³µÇÂ½ÕËºÅ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E5A323300FA"
+			height     	118)
+		    (object UseCaseView "Use Case View::¿Í»§¶ËµÇÂ½ÕËºÅ" @2
+			location   	(1072, 1115)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1072, 1253)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"¿Í»§¶ËµÇÂ½ÕËºÅ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E5A3BF101D4"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::ÒÑ×¢²áÓÃ»§" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1083, 603)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1083, 763)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"ÒÑ×¢²áÓÃ»§")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"4E5A3228033C"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @4
+			location   	(775, 858)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E5A3DF9000F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @5
+				Parent_View 	@4
+				location   	(-380, 252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3DF90203"
+				client     	@4
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @6
+				Parent_View 	@4
+				location   	(-380, 252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3DF90205"
+				client     	@4
+				supplier   	@3
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @7
+			location   	(1074, 924)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E5A3DFC01A5"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @8
+				Parent_View 	@7
+				location   	(-81, 318)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3DFC037A"
+				client     	@7
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @9
+				Parent_View 	@7
+				location   	(-81, 318)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3DFC037C"
+				client     	@7
+				supplier   	@3
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::È¡»ØÃÜÂë" @10
+			location   	(1652, 1059)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1652, 1197)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"È¡»ØÃÜÂë")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E5A3C010148"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$6" @11
+			location   	(1396, 853)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E5A3E0200EA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @12
+				Parent_View 	@11
+				location   	(279, 247)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3E02036B"
+				client     	@11
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @13
+				Parent_View 	@11
+				location   	(279, 247)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E5A3E02036D"
+				client     	@11
+				supplier   	@3
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E5A3213008D"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E5A3213008F"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E5A3213009C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E5A3213008F"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E5A3213009D"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E5A3213008D")
+    process_structure 	(object Processes
+	quid       	"4E5A32130090"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E5A32130092"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E5A32130091"))

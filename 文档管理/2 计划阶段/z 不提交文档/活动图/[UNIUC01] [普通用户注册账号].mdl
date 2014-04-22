@@ -1,0 +1,777 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E54F06E0177"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E54F06E0179"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E54F06E0187"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E54F06E0178"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E54F06E017A"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E54F074007D"
+	    states     	(list States
+		(object State "无需由其它用例进入"
+		    quid       	"4E54F0A30213"
+		    type       	"StartState")
+		(object ActivityState "进入网页"
+		    quid       	"4E54F0BC032C")
+		(object ActivityState "选择注册"
+		    quid       	"4E54F0D501E4")
+		(object ActivityState "填写注册信息"
+		    quid       	"4E54F0EB001F")
+		(object Decision "注册信息是否合法"
+		    quid       	"4E54F124030D")
+		(object ActivityState "邮箱验证"
+		    quid       	"4E54F1AE002E")
+		(object Decision "验证成功"
+		    quid       	"4E54F20B0148")
+		(object ActivityState "跳转至登录界面"
+		    quid       	"4E54F2250138")
+		(object ActivityState "登录获取个人主页"
+		    quid       	"4E55A5CD01F4")
+		(object State "$UNNAMED$0"
+		    quid       	"4E55A5F2035B"
+		    type       	"EndState"))
+	    partitions 	(list Partitions
+		(object Partition "用户"
+		    quid       	"4E54F07D006D"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E54F07E02BF"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E54F0C00109"
+		    supplier   	"Logical View::State/Activity Model::进入网页"
+		    supplier_quidu 	"4E54F0BC032C"
+		    client     	"Logical View::State/Activity Model::无需由其它用例进入"
+		    client_quidu 	"4E54F0A30213"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F0C0010C"))
+		(object State_Transition
+		    quid       	"4E54F0DD01D4"
+		    supplier   	"Logical View::State/Activity Model::选择注册"
+		    supplier_quidu 	"4E54F0D501E4"
+		    client     	"Logical View::State/Activity Model::进入网页"
+		    client_quidu 	"4E54F0BC032C"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F0DD01D7"))
+		(object State_Transition
+		    quid       	"4E54F0F401D4"
+		    supplier   	"Logical View::State/Activity Model::填写注册信息"
+		    supplier_quidu 	"4E54F0EB001F"
+		    client     	"Logical View::State/Activity Model::选择注册"
+		    client_quidu 	"4E54F0D501E4"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F0F401D7"))
+		(object State_Transition
+		    quid       	"4E54F14200AB"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::注册信息是否合法"
+		    supplier_quidu 	"4E54F124030D"
+		    client     	"Logical View::State/Activity Model::填写注册信息"
+		    client_quidu 	"4E54F0EB001F"
+		    Event      	(object Event "否"
+			quid       	"4E55A5AC008C")
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F14200AE"))
+		(object State_Transition
+		    quid       	"4E54F15602FD"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::填写注册信息"
+		    supplier_quidu 	"4E54F0EB001F"
+		    client     	"Logical View::State/Activity Model::注册信息是否合法"
+		    client_quidu 	"4E54F124030D"
+		    Event      	(object Event "否"
+			quid       	"4E54F15602FE")
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F1560300"))
+		(object State_Transition
+		    quid       	"4E54F1BF00FA"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::邮箱验证"
+		    supplier_quidu 	"4E54F1AE002E"
+		    client     	"Logical View::State/Activity Model::注册信息是否合法"
+		    client_quidu 	"4E54F124030D"
+		    Event      	(object Event "是"
+			quid       	"4E54F1BF00FB")
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F1BF00FD"))
+		(object State_Transition
+		    quid       	"4E54F218033C"
+		    supplier   	"Logical View::State/Activity Model::验证成功"
+		    supplier_quidu 	"4E54F20B0148"
+		    client     	"Logical View::State/Activity Model::邮箱验证"
+		    client_quidu 	"4E54F1AE002E"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F218033F"))
+		(object State_Transition
+		    quid       	"4E54F2730251"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::跳转至登录界面"
+		    supplier_quidu 	"4E54F2250138"
+		    client     	"Logical View::State/Activity Model::验证成功"
+		    client_quidu 	"4E54F20B0148"
+		    Event      	(object Event "是"
+			quid       	"4E54F2730252")
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F2730254"))
+		(object State_Transition
+		    quid       	"4E54F2930280"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::填写注册信息"
+		    supplier_quidu 	"4E54F0EB001F"
+		    client     	"Logical View::State/Activity Model::验证成功"
+		    client_quidu 	"4E54F20B0148"
+		    Event      	(object Event "否"
+			quid       	"4E55A5AC00B0")
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F2930283"))
+		(object State_Transition
+		    quid       	"4E55A5D7030D"
+		    supplier   	"Logical View::State/Activity Model::登录获取个人主页"
+		    supplier_quidu 	"4E55A5CD01F4"
+		    client     	"Logical View::State/Activity Model::跳转至登录界面"
+		    client_quidu 	"4E54F2250138"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A5D70310"))
+		(object State_Transition
+		    quid       	"4E55A5FA02AF"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"4E55A5F2035B"
+		    client     	"Logical View::State/Activity Model::登录获取个人主页"
+		    client_quidu 	"4E55A5CD01F4"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55A5FA02B2")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC01] [普通用户注册账号]"
+		    quid       	"4E54F074008C"
+		    title      	"[UNIUC01] [普通用户注册账号]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	697
+		    items      	(list diagram_item_list
+			(object Swimlane "用户" @1
+			    line_color 	3342489
+			    quidu      	"4E54F07D006D"
+			    width      	644)
+			(object StateView "StartState" "无需由其它用例进入" @2
+			    Parent_View 	@1
+			    location   	(251, 231)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(293, 201)
+				nlines     	2
+				max_width  	600
+				label      	"无需由其它用例进入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E54F0A30213"
+			    autoResize 	TRUE)
+			(object ActivityStateView "进入网页" @3
+			    Parent_View 	@1
+			    location   	(249, 479)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(249, 482)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"进入网页")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F0BC032C"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F0C00109"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "选择注册" @5
+			    Parent_View 	@1
+			    location   	(247, 801)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@5
+				location   	(247, 804)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"选择注册")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F0D501E4"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @6
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F0DD01D4"
+			    client     	@3
+			    supplier   	@5
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "填写注册信息" @7
+			    Parent_View 	@1
+			    location   	(248, 1088)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@7
+				location   	(248, 1091)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"填写注册信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F0EB001F"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @8
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F0F401D4"
+			    client     	@5
+			    supplier   	@7
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "邮箱验证" @9
+			    Parent_View 	@1
+			    location   	(248, 1738)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@9
+				location   	(248, 1741)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"邮箱验证")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F1AE002E"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object DecisionView "验证成功" @10
+			    Parent_View 	@1
+			    location   	(247, 1994)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@10
+				location   	(303, 1945)
+				nlines     	2
+				max_width  	300
+				label      	"验证成功")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F20B0148"
+			    autoResize 	TRUE)
+			(object TransView "" @11
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F218033C"
+			    client     	@9
+			    supplier   	@10
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "登录获取个人主页" @12
+			    Parent_View 	@1
+			    location   	(300, 2527)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@12
+				location   	(300, 2530)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"登录获取个人主页")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E55A5CD01F4"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object StateView "EndState" "$UNNAMED$0" @13
+			    Parent_View 	@1
+			    location   	(301, 2811)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@13
+				location   	(355, 2769)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E55A5F2035B"
+			    autoResize 	TRUE)
+			(object Swimlane "系统" @14
+			    location   	(644, 0)
+			    line_color 	3342489
+			    quidu      	"4E54F07E02BF"
+			    width      	754)
+			(object DecisionView "注册信息是否合法" @15
+			    Parent_View 	@14
+			    location   	(916, 1400)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@15
+				location   	(972, 1351)
+				nlines     	2
+				max_width  	300
+				label      	"注册信息是否合法")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F124030D"
+			    autoResize 	TRUE)
+			(object TransView "" @16
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F14200AB"
+			    client     	@7
+			    supplier   	@15
+			    vertices   	(list Points
+				(247, 1146)
+				(247, 1238)
+				(916, 1238)
+				(916, 1363))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @17
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @18
+				Parent_View 	@17
+				location   	(1240, 1220)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.329850
+				height     	76
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F15602FD"
+			    client     	@15
+			    supplier   	@7
+			    vertices   	(list Points
+				(991, 1400)
+				(1316, 1400)
+				(1316, 1088)
+				(422, 1088))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @19
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(548, 1570)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F1BF00FA"
+			    client     	@15
+			    supplier   	@9
+			    vertices   	(list Points
+				(916, 1437)
+				(916, 1525)
+				(247, 1525)
+				(247, 1679))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "跳转至登录界面" @21
+			    Parent_View 	@14
+			    location   	(1018, 2290)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@21
+				location   	(1018, 2293)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"跳转至登录界面")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F2250138"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @22
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A5D7030D"
+			    client     	@21
+			    supplier   	@12
+			    vertices   	(list Points
+				(1018, 2349)
+				(1019, 2528)
+				(474, 2527))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "" @23
+			    location   	(1398, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @24
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55A5FA02AF"
+			    client     	@12
+			    supplier   	@13
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @25
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @26
+				Parent_View 	@25
+				location   	(94, 1939)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"否"
+				pctDist    	0.068584
+				height     	55
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F2930280"
+			    client     	@10
+			    supplier   	@7
+			    vertices   	(list Points
+				(172, 1994)
+				(3, 1993)
+				(3, 1090)
+				(73, 1089))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @27
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @28
+				Parent_View 	@27
+				location   	(481, 2082)
+				font       	(object Font
+				    size       	12
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"是"
+				pctDist    	0.338477
+				height     	44
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F2730251"
+			    client     	@10
+			    supplier   	@21
+			    vertices   	(list Points
+				(247, 2031)
+				(247, 2126)
+				(1019, 2126)
+				(1018, 2231))
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E54F06E017E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E54F06E017A"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E54F06E0186"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E54F06E0178")
+    process_structure 	(object Processes
+	quid       	"4E54F06E017B"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E54F06E017D"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E54F06E017C"))

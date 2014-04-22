@@ -1,0 +1,315 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E5592900232"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E5592900234"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E55929700AC"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E5592900233"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E5592900235"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E5592AF02DE"
+	    states     	(list States
+		(object State "由登录用例进入"
+		    quid       	"4E55939002CE"
+		    type       	"StartState")
+		(object ActivityState "修改管理员账户信息"
+		    quid       	"4E5593A700CB")
+		(object ActivityState "更新账户信息"
+		    quid       	"4E5593D50186")
+		(object State "$UNNAMED$0"
+		    quid       	"4E5594070213"
+		    type       	"EndState"))
+	    partitions 	(list Partitions
+		(object Partition "管理员"
+		    quid       	"4E55937000BB"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E55937F0242"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E5593C6009C"
+		    supplier   	"Logical View::State/Activity Model::修改管理员账户信息"
+		    supplier_quidu 	"4E5593A700CB"
+		    client     	"Logical View::State/Activity Model::由登录用例进入"
+		    client_quidu 	"4E55939002CE"
+		    sendEvent  	(object sendEvent
+			quid       	"4E5593C6009F"))
+		(object State_Transition
+		    quid       	"4E5593EB0128"
+		    supplier   	"Logical View::State/Activity Model::更新账户信息"
+		    supplier_quidu 	"4E5593D50186"
+		    client     	"Logical View::State/Activity Model::修改管理员账户信息"
+		    client_quidu 	"4E5593A700CB"
+		    sendEvent  	(object sendEvent
+			quid       	"4E5593EB012B"))
+		(object State_Transition
+		    quid       	"4E55940A008C"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"4E5594070213"
+		    client     	"Logical View::State/Activity Model::更新账户信息"
+		    client_quidu 	"4E5593D50186"
+		    sendEvent  	(object sendEvent
+			quid       	"4E55940A008F")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC35] [系统管理管理员账号]"
+		    quid       	"4E5592AF02EE"
+		    title      	"[UNIUC35] [系统管理管理员账号]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object Swimlane "管理员" @1
+			    line_color 	3342489
+			    quidu      	"4E55937000BB"
+			    width      	550)
+			(object StateView "StartState" "由登录用例进入" @2
+			    Parent_View 	@1
+			    location   	(259, 200)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(301, 170)
+				nlines     	2
+				max_width  	600
+				label      	"由登录用例进入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E55939002CE"
+			    autoResize 	TRUE)
+			(object ActivityStateView "修改管理员账户信息" @3
+			    Parent_View 	@1
+			    location   	(259, 534)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(259, 537)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"修改管理员账户信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E5593A700CB"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E5593C6009C"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "系统" @5
+			    location   	(550, 0)
+			    line_color 	3342489
+			    quidu      	"4E55937F0242"
+			    width      	564)
+			(object ActivityStateView "更新账户信息" @6
+			    Parent_View 	@5
+			    location   	(825, 965)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@6
+				location   	(825, 968)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"更新账户信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E5593D50186"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @7
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E5593EB0128"
+			    client     	@3
+			    supplier   	@6
+			    vertices   	(list Points
+				(259, 593)
+				(259, 713)
+				(825, 713)
+				(825, 906))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$0" @8
+			    Parent_View 	@5
+			    location   	(825, 1320)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@8
+				location   	(879, 1278)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E5594070213"
+			    autoResize 	TRUE)
+			(object Swimlane "" @9
+			    location   	(1114, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @10
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E55940A008C"
+			    client     	@6
+			    supplier   	@8
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E55929700AD"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E5592900235"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E55929700AB"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E5592900233")
+    process_structure 	(object Processes
+	quid       	"4E5592900236"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E5592900238"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E5592900237"))

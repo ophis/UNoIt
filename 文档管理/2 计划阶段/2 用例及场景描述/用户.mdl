@@ -1,0 +1,1192 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E55B7000399"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E55B700039B"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "普通用户"
+		quid       	"4E55BA2100DA"
+		stereotype 	"Actor")
+	    (object Class "NewClass"
+		quid       	"4E55F3F701F4"
+		stereotype 	"Actor")
+	    (object UseCase "注册账号"
+		quid       	"4E55B81401B5")
+	    (object UseCase "网页登陆账号"
+		quid       	"4E55B829004E")
+	    (object UseCase "桌面客户端登陆账号"
+		quid       	"4E55B839007D")
+	    (object UseCase "取回密码"
+		quid       	"4E55B8430157")
+	    (object UseCase "访问知道网主页"
+		quid       	"4E55B8630138")
+	    (object UseCase "退出登陆"
+		quid       	"4E55B870035B")
+	    (object UseCase "评价词条"
+		quid       	"4E55B87D009C")
+	    (object UseCase "目录查询词条"
+		quid       	"4E55B88702EE")
+	    (object UseCase "关键字查询词条"
+		quid       	"4E55B8900242")
+	    (object UseCase "查看关键字链接"
+		quid       	"4E55B89900BB")
+	    (object UseCase "输入注册邮箱地址"
+		quid       	"4E55BAAD0167")
+	    (object UseCase "输入密码"
+		quid       	"4E55BAF403D8")
+	    (object UseCase "登陆邮箱确认"
+		quid       	"4E55BB1F01A5")
+	    (object UseCase "确认密码"
+		quid       	"4E55BB27005D")
+	    (object UseCase "输入用户名（登陆名）"
+		quid       	"4E55BBB8003E")
+	    (object UseCase "输入用户名"
+		quid       	"4E55BBFA03C8")
+	    (object UseCase "NewUseCase"
+		quid       	"4E55F18702CE")
+	    (object UseCase "NewUseCase2"
+		quid       	"4E55F1A50157"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"4E55F1A8032C"
+			stereotype 	"extend"
+			supplier   	"Use Case View::NewUseCase"
+			quidu      	"4E55F18702CE")))
+	    (object UseCase "重新设置密码"
+		quid       	"4E55F260033C")
+	    (object UseCase "子目录关键字查询"
+		quid       	"4E55F3960177")
+	    (object UseCase "查询词条"
+		quid       	"4E55F3B0031C")
+	    (object Association "$UNNAMED$0"
+		quid       	"4E55BA6C0280"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"4E55BA6D0222"
+			supplier   	"Use Case View::网页登陆账号"
+			quidu      	"4E55B829004E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"4E55BA6D0224"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$3"
+		quid       	"4E55BA76031C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"4E55BA7702CE"
+			supplier   	"Use Case View::评价词条"
+			quidu      	"4E55B87D009C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"4E55BA7702D0"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$6"
+		quid       	"4E55BA860242"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"4E55BA870186"
+			supplier   	"Use Case View::桌面客户端登陆账号"
+			quidu      	"4E55B839007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"4E55BA870188"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$9"
+		quid       	"4E55BA910119"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"4E55BA92008C"
+			supplier   	"Use Case View::取回密码"
+			quidu      	"4E55B8430157"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"4E55BA92008E"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$12"
+		quid       	"4E55BA940109"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"4E55BA950148"
+			supplier   	"Use Case View::访问知道网主页"
+			quidu      	"4E55B8630138"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"4E55BA95014A"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$15"
+		quid       	"4E55BA9702DE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"4E55BA9802BF"
+			supplier   	"Use Case View::退出登陆"
+			quidu      	"4E55B870035B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"4E55BA9802C1"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$18"
+		quid       	"4E55BA9D007D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"4E55BA9D03A9"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"4E55BA9D03AB"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$21"
+		quid       	"4E55BA9F03B9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"4E55BAA002AF"
+			supplier   	"Use Case View::查看关键字链接"
+			quidu      	"4E55B89900BB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"4E55BAA002B1"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$24"
+		quid       	"4E55BAA20271"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"4E55BAA30196"
+			supplier   	"Use Case View::关键字查询词条"
+			quidu      	"4E55B8900242"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"4E55BAA30198"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$27"
+		quid       	"4E55BAA502EE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"4E55BAA60261"
+			supplier   	"Use Case View::目录查询词条"
+			quidu      	"4E55B88702EE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"4E55BAA60263"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$30"
+		quid       	"4E55BBE2007D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"4E55BBE202FD"
+			supplier   	"Use Case View::输入用户名（登陆名）"
+			quidu      	"4E55BBB8003E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"4E55BBE2030D"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5")))
+	    (object Association "$UNNAMED$33"
+		quid       	"4E55BBE40186"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"4E55BBE50000"
+			supplier   	"Use Case View::输入注册邮箱地址"
+			quidu      	"4E55BAAD0167"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"4E55BBE50002"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5")))
+	    (object Association "$UNNAMED$36"
+		quid       	"4E55BBE7009C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"4E55BBE8002E"
+			supplier   	"Use Case View::输入密码"
+			quidu      	"4E55BAF403D8"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"4E55BBE80030"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5")))
+	    (object Association "$UNNAMED$39"
+		quid       	"4E55BBE902EE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"4E55BBEA02CE"
+			supplier   	"Use Case View::确认密码"
+			quidu      	"4E55BB27005D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"4E55BBEA02D0"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5")))
+	    (object Association "$UNNAMED$42"
+		quid       	"4E55BBEC01E4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"4E55BBED002E"
+			supplier   	"Use Case View::登陆邮箱确认"
+			quidu      	"4E55BB1F01A5"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"4E55BBED0030"
+			supplier   	"Use Case View::注册账号"
+			quidu      	"4E55B81401B5")))
+	    (object Association "$UNNAMED$45"
+		quid       	"4E55F1A2001F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"4E55F1A2031C"
+			supplier   	"Use Case View::NewUseCase"
+			quidu      	"4E55F18702CE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"4E55F1A2031E"
+			supplier   	"Use Case View::网页登陆账号"
+			quidu      	"4E55B829004E")))
+	    (object Association "$UNNAMED$48"
+		quid       	"4E55F285031C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"4E55F2860280"
+			supplier   	"Use Case View::重新设置密码"
+			quidu      	"4E55F260033C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"4E55F2860282"
+			supplier   	"Use Case View::取回密码"
+			quidu      	"4E55B8430157")))
+	    (object Association "$UNNAMED$51"
+		quid       	"4E55F3AA0280"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$52"
+			quid       	"4E55F3AB008C"
+			supplier   	"Use Case View::子目录关键字查询"
+			quidu      	"4E55F3960177"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$53"
+			quid       	"4E55F3AB008E"
+			supplier   	"Use Case View::目录查询词条"
+			quidu      	"4E55B88702EE")))
+	    (object Association "$UNNAMED$54"
+		quid       	"4E55F3BD0290"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$55"
+			quid       	"4E55F3BE0148"
+			supplier   	"Use Case View::查询词条"
+			quidu      	"4E55F3B0031C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$56"
+			quid       	"4E55F3BE014A"
+			supplier   	"Use Case View::普通用户"
+			quidu      	"4E55BA2100DA")))
+	    (object Association "$UNNAMED$57"
+		quid       	"4E55F3BF02CE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$58"
+			quid       	"4E55F3C0002E"
+			supplier   	"Use Case View::关键字查询词条"
+			quidu      	"4E55B8900242"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$59"
+			quid       	"4E55F3C00030"
+			supplier   	"Use Case View::查询词条"
+			quidu      	"4E55F3B0031C")))
+	    (object Association "$UNNAMED$60"
+		quid       	"4E55F3C1035B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$61"
+			quid       	"4E55F3C20196"
+			supplier   	"Use Case View::目录查询词条"
+			quidu      	"4E55B88702EE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$62"
+			quid       	"4E55F3C20198"
+			supplier   	"Use Case View::查询词条"
+			quidu      	"4E55F3B0031C")))
+	    (object Class_Category "NewPackage"
+		quid       	"4E55B81E00BB"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list)))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E55B70201E5"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	400
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::重新设置密码" @1
+			location   	(1625, 730)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1625, 868)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"重新设置密码")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55F260033C"
+			height     	118)
+		    (object UseCaseView "Use Case View::登陆邮箱确认" @2
+			location   	(1640, 215)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1640, 353)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"登陆邮箱确认")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55BB1F01A5"
+			height     	118)
+		    (object UseCaseView "Use Case View::网页登陆账号" @3
+			location   	(1105, 446)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1105, 584)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"网页登陆账号")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B829004E"
+			height     	118)
+		    (object UseCaseView "Use Case View::评价词条" @4
+			location   	(1009, 1323)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1009, 1461)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"评价词条")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B87D009C"
+			height     	118)
+		    (object UseCaseView "Use Case View::取回密码" @5
+			location   	(1125, 732)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1125, 870)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"取回密码")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B8430157"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$48" @6
+			location   	(1374, 729)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55F285031C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$49" @7
+				Parent_View 	@6
+				location   	(-859, -605)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F2860280"
+				client     	@6
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$50" @8
+				Parent_View 	@6
+				location   	(-859, -605)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F2860282"
+				client     	@6
+				supplier   	@5
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::访问知道网主页" @9
+			location   	(1178, 995)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(1178, 1133)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"访问知道网主页")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B8630138"
+			height     	118)
+		    (object UseCaseView "Use Case View::退出登陆" @10
+			location   	(464, 1751)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(464, 1889)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"退出登陆")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B870035B"
+			height     	118)
+		    (object UseCaseView "Use Case View::查看关键字链接" @11
+			location   	(825, 1580)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(825, 1718)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"查看关键字链接")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B89900BB"
+			height     	118)
+		    (object UseCaseView "Use Case View::注册账号" @12
+			location   	(921, 217)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(921, 355)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"注册账号")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B81401B5"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$42" @13
+			location   	(1278, 214)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BBEC01E4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @14
+				Parent_View 	@13
+				location   	(132, -1075)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BBED002E"
+				client     	@13
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @15
+				Parent_View 	@13
+				location   	(132, -1075)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BBED0030"
+				client     	@13
+				supplier   	@12
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::子目录关键字查询" @16
+			location   	(2111, 1034)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(2111, 1172)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"子目录关键字查询")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55F3960177"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::普通用户" @17
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(161, 995)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(161, 1155)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"普通用户")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"4E55BA2100DA"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @18
+			location   	(583, 746)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA6C0280"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @19
+				Parent_View 	@18
+				location   	(-962, -335)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA6D0222"
+				client     	@18
+				supplier   	@3
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @20
+				Parent_View 	@18
+				location   	(-962, -335)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA6D0224"
+				client     	@18
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @21
+			location   	(558, 1146)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA76031C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @22
+				Parent_View 	@21
+				location   	(-987, 65)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA7702CE"
+				client     	@21
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @23
+				Parent_View 	@21
+				location   	(-987, 65)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA7702D0"
+				client     	@21
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @24
+			location   	(616, 867)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA910119"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @25
+				Parent_View 	@24
+				location   	(-926, -283)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA92008C"
+				client     	@24
+				supplier   	@5
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @26
+				Parent_View 	@24
+				location   	(-926, -283)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA92008E"
+				client     	@24
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @27
+			location   	(643, 995)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA940109"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @28
+				Parent_View 	@27
+				location   	(-899, -155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA950148"
+				client     	@27
+				supplier   	@9
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @29
+				Parent_View 	@27
+				location   	(-899, -155)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA95014A"
+				client     	@27
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @30
+			location   	(335, 1437)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA9702DE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @31
+				Parent_View 	@30
+				location   	(-1207, 287)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA9802BF"
+				client     	@30
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @32
+				Parent_View 	@30
+				location   	(-1207, 287)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA9802C1"
+				client     	@30
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @33
+			location   	(512, 1304)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA9F03B9"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @34
+				Parent_View 	@33
+				location   	(-1030, 154)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BAA002AF"
+				client     	@33
+				supplier   	@11
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @35
+				Parent_View 	@33
+				location   	(-1030, 154)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BAA002B1"
+				client     	@33
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @36
+			location   	(515, 626)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55BA9D007D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @37
+				Parent_View 	@36
+				location   	(-1027, -524)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA9D03A9"
+				client     	@36
+				supplier   	@12
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @38
+				Parent_View 	@36
+				location   	(-1027, -524)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55BA9D03AB"
+				client     	@36
+				supplier   	@17
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::关键字查询词条" @39
+			location   	(1663, 1387)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(1663, 1525)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"关键字查询词条")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B8900242"
+			height     	118)
+		    (object UseCaseView "Use Case View::目录查询词条" @40
+			location   	(1689, 1034)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(1689, 1172)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"目录查询词条")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55B88702EE"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$51" @41
+			location   	(1898, 1034)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55F3AA0280"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$52" @42
+				Parent_View 	@41
+				location   	(624, -143)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3AB008C"
+				client     	@41
+				supplier   	@16
+				line_style 	0)
+			    (object RoleView "$UNNAMED$53" @43
+				Parent_View 	@41
+				location   	(624, -143)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3AB008E"
+				client     	@41
+				supplier   	@40
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::查询词条" @44
+			location   	(1315, 1190)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@44
+			    location   	(1315, 1328)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"查询词条")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4E55F3B0031C"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$54" @45
+			location   	(710, 1085)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55F3BD0290"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$55" @46
+				Parent_View 	@45
+				location   	(571, 577)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3BE0148"
+				client     	@45
+				supplier   	@44
+				line_style 	0)
+			    (object RoleView "$UNNAMED$56" @47
+				Parent_View 	@45
+				location   	(571, 577)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3BE014A"
+				client     	@45
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$57" @48
+			location   	(1490, 1288)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55F3BF02CE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$58" @49
+				Parent_View 	@48
+				location   	(697, 357)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3C0002E"
+				client     	@48
+				supplier   	@39
+				line_style 	0)
+			    (object RoleView "$UNNAMED$59" @50
+				Parent_View 	@48
+				location   	(697, 357)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3C00030"
+				client     	@48
+				supplier   	@44
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$60" @51
+			location   	(1501, 1110)
+			font       	(object Font
+			    size       	12
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4E55F3C1035B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$61" @52
+				Parent_View 	@51
+				location   	(708, 179)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3C20196"
+				client     	@51
+				supplier   	@40
+				line_style 	0)
+			    (object RoleView "$UNNAMED$62" @53
+				Parent_View 	@51
+				location   	(708, 179)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4E55F3C20198"
+				client     	@51
+				supplier   	@44
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E55B700039A"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E55B700039C"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E55B70201E6"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E55B700039C"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E55B70201E4"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E55B700039A")
+    process_structure 	(object Processes
+	quid       	"4E55B70003A9"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E55B70003AB"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E55B70003AA"))

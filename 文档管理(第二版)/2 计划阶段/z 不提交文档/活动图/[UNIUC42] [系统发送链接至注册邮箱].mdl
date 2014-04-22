@@ -1,0 +1,552 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 8.2.0310.2800"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4E54F2CB02BF"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4E54F2CB02C1"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4E54F2CB02CF"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4E54F2CB02C0"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4E54F2CB02C2"
+	logical_models 	(list unit_reference_list)
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"4E54F2D201C5"
+	    states     	(list States
+		(object State "由注册用例进入"
+		    quid       	"4E54F3170148"
+		    type       	"StartState")
+		(object ActivityState "数据库存入账户信息"
+		    quid       	"4E54F3380251")
+		(object ActivityState "完成用户注册"
+		    quid       	"4E54F358037A")
+		(object ActivityState "向用户注册邮箱发送链接"
+		    quid       	"4E54F36F031C")
+		(object ActivityState "进入邮箱"
+		    quid       	"4E54F3930177")
+		(object ActivityState "打开连接"
+		    quid       	"4E54F3B9000F")
+		(object ActivityState "完成账户激活"
+		    quid       	"4E54F3CB0222")
+		(object ActivityState "页面提示：该账户完成激活"
+		    quid       	"4E54F3F002EE")
+		(object State "$UNNAMED$0"
+		    quid       	"4E54F408009C"
+		    type       	"EndState"))
+	    partitions 	(list Partitions
+		(object Partition "用户"
+		    quid       	"4E54F301029F"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Partition "系统"
+		    quid       	"4E54F30300CB"
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"4E54F3460213"
+		    supplier   	"Logical View::State/Activity Model::数据库存入账户信息"
+		    supplier_quidu 	"4E54F3380251"
+		    client     	"Logical View::State/Activity Model::由注册用例进入"
+		    client_quidu 	"4E54F3170148"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F3460216"))
+		(object State_Transition
+		    quid       	"4E54F36600CB"
+		    supplier   	"Logical View::State/Activity Model::完成用户注册"
+		    supplier_quidu 	"4E54F358037A"
+		    client     	"Logical View::State/Activity Model::数据库存入账户信息"
+		    client_quidu 	"4E54F3380251"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F36600CE"))
+		(object State_Transition
+		    quid       	"4E54F38302EE"
+		    supplier   	"Logical View::State/Activity Model::向用户注册邮箱发送链接"
+		    supplier_quidu 	"4E54F36F031C"
+		    client     	"Logical View::State/Activity Model::完成用户注册"
+		    client_quidu 	"4E54F358037A"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F38302F1"))
+		(object State_Transition
+		    quid       	"4E54F3A501D4"
+		    supplier   	"Logical View::State/Activity Model::进入邮箱"
+		    supplier_quidu 	"4E54F3930177"
+		    client     	"Logical View::State/Activity Model::向用户注册邮箱发送链接"
+		    client_quidu 	"4E54F36F031C"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F3A501D7"))
+		(object State_Transition
+		    quid       	"4E54F3C000AB"
+		    supplier   	"Logical View::State/Activity Model::打开连接"
+		    supplier_quidu 	"4E54F3B9000F"
+		    client     	"Logical View::State/Activity Model::进入邮箱"
+		    client_quidu 	"4E54F3930177"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F3C000AE"))
+		(object State_Transition
+		    quid       	"4E54F3E6003E"
+		    supplier   	"Logical View::State/Activity Model::完成账户激活"
+		    supplier_quidu 	"4E54F3CB0222"
+		    client     	"Logical View::State/Activity Model::打开连接"
+		    client_quidu 	"4E54F3B9000F"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F3E60041"))
+		(object State_Transition
+		    quid       	"4E54F40300EA"
+		    supplier   	"Logical View::State/Activity Model::页面提示：该账户完成激活"
+		    supplier_quidu 	"4E54F3F002EE"
+		    client     	"Logical View::State/Activity Model::完成账户激活"
+		    client_quidu 	"4E54F3CB0222"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F40300ED"))
+		(object State_Transition
+		    quid       	"4E54F4100109"
+		    supplier   	"$UNNAMED$0"
+		    supplier_quidu 	"4E54F408009C"
+		    client     	"Logical View::State/Activity Model::页面提示：该账户完成激活"
+		    client_quidu 	"4E54F3F002EE"
+		    sendEvent  	(object sendEvent
+			quid       	"4E54F410010C")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object ActivityDiagram "[UNIUC42] [系统发送链接至注册邮箱]"
+		    quid       	"4E54F2D201D4"
+		    title      	"[UNIUC42] [系统发送链接至注册邮箱]"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	2006
+		    items      	(list diagram_item_list
+			(object Swimlane "用户" @1
+			    line_color 	3342489
+			    quidu      	"4E54F301029F"
+			    width      	642)
+			(object ActivityStateView "进入邮箱" @2
+			    Parent_View 	@1
+			    location   	(290, 1543)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(290, 1546)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"进入邮箱")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F3930177"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object ActivityStateView "打开连接" @3
+			    Parent_View 	@1
+			    location   	(288, 1807)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@3
+				location   	(288, 1810)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"打开连接")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F3B9000F"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @4
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F3C000AB"
+			    client     	@2
+			    supplier   	@3
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object Swimlane "系统" @5
+			    location   	(642, 0)
+			    line_color 	3342489
+			    quidu      	"4E54F30300CB"
+			    width      	678)
+			(object StateView "StartState" "由注册用例进入" @6
+			    Parent_View 	@5
+			    location   	(958, 206)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@6
+				location   	(1000, 176)
+				nlines     	2
+				max_width  	600
+				label      	"由注册用例进入")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E54F3170148"
+			    autoResize 	TRUE)
+			(object ActivityStateView "数据库存入账户信息" @7
+			    Parent_View 	@5
+			    location   	(959, 500)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@7
+				location   	(959, 503)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"数据库存入账户信息")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F3380251"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @8
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F3460213"
+			    client     	@6
+			    supplier   	@7
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "完成用户注册" @9
+			    Parent_View 	@5
+			    location   	(959, 818)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@9
+				location   	(959, 821)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"完成用户注册")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F358037A"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @10
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F36600CB"
+			    client     	@7
+			    supplier   	@9
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "向用户注册邮箱发送链接" @11
+			    Parent_View 	@5
+			    location   	(959, 1203)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@11
+				location   	(959, 1206)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	312
+				justify    	0
+				label      	"向用户注册邮箱发送链接")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F36F031C"
+			    width      	426
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @12
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F38302EE"
+			    client     	@9
+			    supplier   	@11
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @13
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F3A501D4"
+			    client     	@11
+			    supplier   	@2
+			    vertices   	(list Points
+				(959, 1262)
+				(959, 1331)
+				(288, 1331)
+				(289, 1483))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "完成账户激活" @14
+			    Parent_View 	@5
+			    location   	(981, 2090)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@14
+				location   	(981, 2093)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	261
+				justify    	0
+				label      	"完成账户激活")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F3CB0222"
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @15
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F3E6003E"
+			    client     	@3
+			    supplier   	@14
+			    vertices   	(list Points
+				(288, 1866)
+				(288, 1926)
+				(981, 1926)
+				(981, 2031))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "页面提示：该账户完成激活" @16
+			    Parent_View 	@5
+			    location   	(981, 2389)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@16
+				location   	(981, 2392)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	300
+				justify    	0
+				label      	"页面提示：该账户完成激活")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"4E54F3F002EE"
+			    width      	414
+			    height     	118
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @17
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F40300EA"
+			    client     	@14
+			    supplier   	@16
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$0" @18
+			    Parent_View 	@5
+			    location   	(981, 2659)
+			    font       	(object Font
+				size       	12
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@18
+				location   	(1035, 2617)
+				nlines     	2
+				max_width  	600
+				label      	"")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"4E54F408009C"
+			    autoResize 	TRUE)
+			(object Swimlane "" @19
+			    location   	(1320, 0)
+			    line_color 	3342489
+			    width      	450)
+			(object TransView "" @20
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4E54F4100109"
+			    client     	@16
+			    supplier   	@18
+			    line_style 	0
+			    x_offset   	FALSE)))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4E54F2CB02C6"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4E54F2CB02C2"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4E54F2CB02CE"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4E54F2CB02C0")
+    process_structure 	(object Processes
+	quid       	"4E54F2CB02C3"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4E54F2CB02C5"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Web Publisher"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4E54F2CB02C4"))

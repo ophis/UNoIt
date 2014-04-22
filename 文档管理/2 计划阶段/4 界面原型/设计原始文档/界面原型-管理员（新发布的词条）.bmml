@@ -1,0 +1,130 @@
+<mockup version="1.0" skin="sketch" measuredW="1116" measuredH="790" mockupW="915" mockupH="790">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="201" y="0" w="915" h="790" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>U%20No.IT%0Ahttp%3A//www.unoit.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::HRule" x="323" y="182" w="661" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Image" x="317" y="74" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::SubTitle" x="418" y="71" w="-1" h="-1" measuredW="130" measuredH="33" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ni%20Dong%20De</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1100" y="69" w="-1" h="698" measuredW="16" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <value>0</value>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::LinkBar" x="548" y="730" w="-1" h="-1" measuredW="206" measuredH="22" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u8FD9%u5C31%u662F%u4E9B%2C%u65E0%u5173%u7D27%u8981%2C%u7684%u4E1C%u897F%7E</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::TabBar" x="336" y="209" w="646" h="481" measuredW="286" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2C%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u8BC4%u8BBA%u5BA1%u6838%uFF09%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u8BC4%u8BBA%u5BA1%u6838%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u8BC4%u8BBA%u5BA1%u6838%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u8BC4%u8BBA%u5BA1%u6838%uFF09.bmml%2C%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u4FEE%u6539%u5BC6%u7801%uFF09%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u4FEE%u6539%u5BC6%u7801%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u4FEE%u6539%u5BC6%u7801%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u4FEE%u6539%u5BC6%u7801%uFF09.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22219%2C209%2C283%2C235%22%20href%3D%22%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B-%25E7%25AE%25A1%25E7%2590%2586%25E5%2591%2598%25EF%25BC%2588%25E8%25AF%2584%25E8%25AE%25BA%25E5%25AE%25A1%25E6%25A0%25B8%25EF%25BC%2589.bmml%22%20alt%3D%22%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u8BC4%u8BBA%u5BA1%u6838%uFF09%22%20id%3D%2293_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22283%2C209%2C347%2C235%22%20href%3D%22%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B-%25E7%25AE%25A1%25E7%2590%2586%25E5%2591%2598%25EF%25BC%2588%25E4%25BF%25AE%25E6%2594%25B9%25E5%25AF%2586%25E7%25A0%2581%25EF%25BC%2589.bmml%22%20alt%3D%22%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u4FEE%u6539%u5BC6%u7801%uFF09%22%20id%3D%2293_1%22/%3E%0A</map>
+        <selectedIndex>0</selectedIndex>
+        <text>%u7BA1%u7406%u8BCD%u6761%2C%u8BC4%u8BBA%u5BA1%u6838%2C%u4FEE%u6539%u5BC6%u7801</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::ButtonBar" x="728" y="257" w="-1" h="-1" measuredW="214" measuredH="30" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2C%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u4FEE%u6539%u7684%u8BCD%u6761%uFF09%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u4FEE%u6539%u7684%u8BCD%u6761%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u4FEE%u6539%u7684%u8BCD%u6761%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u4FEE%u6539%u7684%u8BCD%u6761%uFF09.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22636%2C257%2C743%2C287%22%20href%3D%22%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B-%25E7%25AE%25A1%25E7%2590%2586%25E5%2591%2598%25EF%25BC%2588%25E6%2596%25B0%25E4%25BF%25AE%25E6%2594%25B9%25E7%259A%2584%25E8%25AF%258D%25E6%259D%25A1%25EF%25BC%2589.bmml%22%20alt%3D%22%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u4FEE%u6539%u7684%u8BCD%u6761%uFF09%22%20id%3D%22103_0%22/%3E%0A</map>
+        <selectedIndex>0</selectedIndex>
+        <text>%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%2C%u65B0%u4FEE%u6539%u7684%u8BCD%u6761</text>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::HRule" x="373" y="303" w="567" h="-1" measuredW="100" measuredH="5" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::FieldSet" x="382" y="320" w="551" h="77" measuredW="200" measuredH="170" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u8BCD%u6761%u540D%u79F0A</text>
+      </controlProperties>
+    </control>
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::Label" x="613" y="375" w="266" h="25" measuredW="254" measuredH="22" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <state>disabled</state>
+        <text>%u63D0%u4EA4%u4EBA%uFF1A%u7528%u6237A%20%20%20%u53D1%u5E03%u65E5%u671F%uFF1AYYYY-MM-DD</text>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::Paragraph" x="402" y="341" w="497" h="46" measuredW="200" measuredH="140" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%u8BCD%u6761%u5185%u5BB9%u662F%u5F88%u957F%u7684%uFF0C%u901A%u5E38%u90FD%u4F1A%u957F%u5230%u53EF%u4EE5%u6362%u884C%u3002%u4E0D%u80FD%u6362%u884C%u7684%u8BCD%u6761%u5185%u5BB9%u4F60%u600E%u4E48%u597D%u610F%u601D%u53EB%u505A%u8BCD%u6761%u5185%u5BB9%u554A%u4EB2%uFF01</text>
+      </controlProperties>
+    </control>
+    <control controlID="119" controlTypeID="com.balsamiq.mockups::MenuBar" x="644" y="75" w="344" h="29" measuredW="290" measuredH="29" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <hrefs>%2C%2C%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%uFF09%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%uFF09.bmml%2C</hrefs>
+        <icon>ContactsIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22635%2C78.5%2C675%2C100.5%22%20href%3D%22%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B-%25E7%25AE%25A1%25E7%2590%2586%25E5%2591%2598%25EF%25BC%2588%25E6%2596%25B0%25E5%258F%2591%25E5%25B8%2583%25E7%259A%2584%25E8%25AF%258D%25E6%259D%25A1%25EF%25BC%2589.bmml%22%20alt%3D%22%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u65B0%u53D1%u5E03%u7684%u8BCD%u6761%uFF09%22%20id%3D%22119_0%22/%3E%0A</map>
+        <selectedIndex>-1</selectedIndex>
+        <text>Hi%7E%uFF08%u67D0%u67D0%u67D0%uFF09%uFF01%2C%2C%u7BA1%u7406%2C%u6CE8%u9500</text>
+      </controlProperties>
+    </control>
+    <control controlID="128" controlTypeID="com.balsamiq.mockups::Link" x="885" y="375" w="-1" h="-1" measuredW="32" measuredH="22" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u5BA1%u6838%u53D1%u5E03%uFF09%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u5BA1%u6838%u53D1%u5E03%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u5BA1%u6838%u53D1%u5E03%uFF09.bmml%26bm%3B%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u5BA1%u6838%u53D1%u5E03%uFF09.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22684%2C375%2C716%2C397%22%20href%3D%22%25E7%2595%258C%25E9%259D%25A2%25E5%258E%259F%25E5%259E%258B-%25E7%25AE%25A1%25E7%2590%2586%25E5%2591%2598%25EF%25BC%2588%25E5%25AE%25A1%25E6%25A0%25B8%25E5%258F%2591%25E5%25B8%2583%25EF%25BC%2589.bmml%22%20alt%3D%22%u754C%u9762%u539F%u578B-%u7BA1%u7406%u5458%uFF08%u5BA1%u6838%u53D1%u5E03%uFF09%22%20id%3D%22128%22/%3E</map>
+        <text>%u67E5%u770B</text>
+      </controlProperties>
+    </control>
+    <control controlID="135" controlTypeID="com.balsamiq.mockups::FieldSet" x="382" y="525" w="551" h="77" measuredW="200" measuredH="170" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u8BCD%u6761%u540D%u79F0C</text>
+      </controlProperties>
+    </control>
+    <control controlID="136" controlTypeID="com.balsamiq.mockups::Label" x="613" y="580" w="266" h="25" measuredW="254" measuredH="22" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <state>disabled</state>
+        <text>%u63D0%u4EA4%u4EBA%uFF1A%u7528%u6237A%20%20%20%u53D1%u5E03%u65E5%u671F%uFF1AYYYY-MM-DD</text>
+      </controlProperties>
+    </control>
+    <control controlID="137" controlTypeID="com.balsamiq.mockups::Paragraph" x="402" y="546" w="497" h="46" measuredW="200" measuredH="140" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%u8BCD%u6761%u5185%u5BB9%u662F%u5F88%u957F%u7684%uFF0C%u901A%u5E38%u90FD%u4F1A%u957F%u5230%u53EF%u4EE5%u6362%u884C%u3002%u4E0D%u80FD%u6362%u884C%u7684%u8BCD%u6761%u5185%u5BB9%u4F60%u600E%u4E48%u597D%u610F%u601D%u53EB%u505A%u8BCD%u6761%u5185%u5BB9%u554A%u4EB2%uFF01</text>
+      </controlProperties>
+    </control>
+    <control controlID="138" controlTypeID="com.balsamiq.mockups::Link" x="885" y="580" w="-1" h="-1" measuredW="32" measuredH="22" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u67E5%u770B</text>
+      </controlProperties>
+    </control>
+    <control controlID="139" controlTypeID="com.balsamiq.mockups::FieldSet" x="382" y="422" w="551" h="77" measuredW="200" measuredH="170" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u8BCD%u6761%u540D%u79F0C</text>
+      </controlProperties>
+    </control>
+    <control controlID="140" controlTypeID="com.balsamiq.mockups::Label" x="613" y="477" w="266" h="25" measuredW="254" measuredH="22" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <state>disabled</state>
+        <text>%u63D0%u4EA4%u4EBA%uFF1A%u7528%u6237C%20%20%20%u53D1%u5E03%u65E5%u671F%uFF1AYYYY-MM-DD</text>
+      </controlProperties>
+    </control>
+    <control controlID="141" controlTypeID="com.balsamiq.mockups::Paragraph" x="402" y="443" w="497" h="46" measuredW="200" measuredH="140" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%u8BCD%u6761%u5185%u5BB9%u662F%u5F88%u957F%u7684%uFF0C%u901A%u5E38%u90FD%u4F1A%u957F%u5230%u53EF%u4EE5%u6362%u884C%u3002%u4E0D%u80FD%u6362%u884C%u7684%u8BCD%u6761%u5185%u5BB9%u4F60%u600E%u4E48%u597D%u610F%u601D%u53EB%u505A%u8BCD%u6761%u5185%u5BB9%u554A%u4EB2%uFF01</text>
+      </controlProperties>
+    </control>
+    <control controlID="142" controlTypeID="com.balsamiq.mockups::Link" x="885" y="477" w="-1" h="-1" measuredW="32" measuredH="22" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u67E5%u770B</text>
+      </controlProperties>
+    </control>
+    <control controlID="147" controlTypeID="com.balsamiq.mockups::LinkBar" x="597" y="640" w="-1" h="-1" measuredW="108" measuredH="22" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u4E0A%u4E00%u9875%2C%u4E0B%u4E00%u9875</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
