@@ -1,0 +1,11 @@
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\BLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\BLL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\DAL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\Lucene.China.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\Lucene.Net.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\Model.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\DAL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\bin\Debug\Model.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\obj\Debug\BLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNOIT" Class="DALDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SHARP;Initial Catalog=UNOIT;Persist Security Info=True;User ID=SharpUsers" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="UNOITConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Administrators" Member="Administrators">
+    <Type Name="Administrators">
+      <Column Name="AdministratorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdministratorName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comment" Member="Comment">
+    <Type Name="Comment">
+      <Column Name="CommentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CommentTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CommentContents" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Entry_Comment" Member="Entry" ThisKey="EntryID" OtherKey="EntryID" Type="Entry" IsForeignKey="true" />
+      <Association Name="Users_Comment" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Catagory" Member="Catagory">
+    <Type Name="Catagory">
+      <Column Name="CatagoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CatagoryName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="UpperCatagoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Catagory_Entry" Member="Entry" ThisKey="CatagoryID" OtherKey="CategoryID" Type="Entry" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entry" Member="Entry">
+    <Type Name="Entry">
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EntryName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReleasedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EntrySource" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ClickSum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DigSum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpSum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Entry_Comment" Member="Comment" ThisKey="EntryID" OtherKey="EntryID" Type="Comment" />
+      <Association Name="Entry_EntryKeywordMenu" Member="EntryKeywordMenu" ThisKey="EntryID" OtherKey="EntryID" Type="EntryKeywordMenu" />
+      <Association Name="Entry_Evaluation" Member="Evaluation" ThisKey="EntryID" OtherKey="EntryID" Type="Evaluation" />
+      <Association Name="Entry_EntryModifiedHistory" Member="EntryModifiedHistory" ThisKey="EntryID" OtherKey="EntryID" Type="EntryModifiedHistory" />
+      <Association Name="Catagory_Entry" Member="Catagory" ThisKey="CategoryID" OtherKey="CatagoryID" Type="Catagory" IsForeignKey="true" />
+      <Association Name="Users_Entry" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntryKeywordMenu" Member="EntryKeywordMenu">
+    <Type Name="EntryKeywordMenu">
+      <Column Name="MenuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KeywordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Entry_EntryKeywordMenu" Member="Entry" ThisKey="EntryID" OtherKey="EntryID" Type="Entry" IsForeignKey="true" />
+      <Association Name="Keywords_EntryKeywordMenu" Member="Keywords" ThisKey="KeywordID" OtherKey="KeywordID" Type="Keywords" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntryToBeVerified" Member="EntryToBeVerified">
+    <Type Name="EntryToBeVerified">
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EntryName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CatagoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReleaseTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EntrySource" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Users_EntryToBeVerified" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Evaluation" Member="Evaluation">
+    <Type Name="Evaluation">
+      <Column Name="EvaluationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EvaluateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Entry_Evaluation" Member="Entry" ThisKey="EntryID" OtherKey="EntryID" Type="Entry" IsForeignKey="true" />
+      <Association Name="Users_Evaluation" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Keywords" Member="Keywords">
+    <Type Name="Keywords">
+      <Column Name="KeywordID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KeywordName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Keywords_EntryKeywordMenu" Member="EntryKeywordMenu" ThisKey="KeywordID" OtherKey="KeywordID" Type="EntryKeywordMenu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Notify" Member="Notify">
+    <Type Name="Notify">
+      <Column Name="NotifyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NotifyTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NotifyContents" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Users_Notify" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Prosecution" Member="Prosecution">
+    <Type Name="Prosecution">
+      <Column Name="ProsecutionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsEntry" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProsecutionTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Birthdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IllegalCounts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActivated" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordErrorCounts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FrozenTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="SkilledField" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Users_Comment" Member="Comment" ThisKey="UserID" OtherKey="UserID" Type="Comment" />
+      <Association Name="Users_Entry" Member="Entry" ThisKey="UserID" OtherKey="UserID" Type="Entry" />
+      <Association Name="Users_EntryToBeVerified" Member="EntryToBeVerified" ThisKey="UserID" OtherKey="UserID" Type="EntryToBeVerified" />
+      <Association Name="Users_Evaluation" Member="Evaluation" ThisKey="UserID" OtherKey="UserID" Type="Evaluation" />
+      <Association Name="Users_Notify" Member="Notify" ThisKey="UserID" OtherKey="UserID" Type="Notify" />
+      <Association Name="Users_EntryModifiedHistory" Member="EntryModifiedHistory" ThisKey="UserID" OtherKey="UserID" Type="EntryModifiedHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Message" Member="Message">
+    <Type Name="Message">
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sender" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Receiver" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="SendTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Contents" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntryModifiedHistory" Member="EntryModifiedHistory">
+    <Type Name="EntryModifiedHistory">
+      <Column Name="HistoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EntryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Entry_EntryModifiedHistory" Member="Entry" ThisKey="EntryID" OtherKey="EntryID" Type="Entry" IsForeignKey="true" />
+      <Association Name="Users_EntryModifiedHistory" Member="Users" ThisKey="UserID" OtherKey="UserID" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

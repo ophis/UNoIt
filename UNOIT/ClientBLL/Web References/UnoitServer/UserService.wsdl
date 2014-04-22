@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateUserNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="tns:LoginStateFlag" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="LoginStateFlag">
+        <s:restriction base="s:string">
+          <s:enumeration value="USERSUCCESS" />
+          <s:enumeration value="ADMINSUCCESS" />
+          <s:enumeration value="PASSWORDERROR" />
+          <s:enumeration value="USERNAMENOTEXIST" />
+          <s:enumeration value="NONACTIVATED" />
+          <s:enumeration value="ACCOUNTFREEZE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SearchEntryByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEntryByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchEntryByNameResult" type="tns:Entry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Entry">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EntryToBeVerified">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="tns:ArrayOfString" />
+              <s:element minOccurs="1" maxOccurs="1" name="ClickSum" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastModification" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="DigSum" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UpSum" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EntryToBeVerified">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CatagoryId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReleasedTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntryId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchEntryByEntryId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="entryId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEntryByEntryIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchEntryByEntryIdResult" type="tns:Entry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEntriesByKeywords">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEntriesByKeywordsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchEntriesByKeywordsResult" type="tns:ArrayOfEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Entry" nillable="true" type="tns:Entry" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Support">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entryName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupportResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entryName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisSupportResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newEntry" type="tns:EntryToBeVerified" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditEntryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserIdByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserIdByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserIdByNameResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUserName" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntryByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchEntryByName" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntryByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchEntryByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntryByEntryIdSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchEntryByEntryId" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntryByEntryIdSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchEntryByEntryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntriesByKeywordsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchEntriesByKeywords" />
+  </wsdl:message>
+  <wsdl:message name="SearchEntriesByKeywordsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchEntriesByKeywordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupportSoapIn">
+    <wsdl:part name="parameters" element="tns:Support" />
+  </wsdl:message>
+  <wsdl:message name="SupportSoapOut">
+    <wsdl:part name="parameters" element="tns:SupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:DisSupport" />
+  </wsdl:message>
+  <wsdl:message name="DisSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:DisSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:EditEntry" />
+  </wsdl:message>
+  <wsdl:message name="EditEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:EditEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserIdByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserIdByName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserIdByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserIdByNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserName">
+      <wsdl:input message="tns:ValidateUserNameSoapIn" />
+      <wsdl:output message="tns:ValidateUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByName">
+      <wsdl:input message="tns:SearchEntryByNameSoapIn" />
+      <wsdl:output message="tns:SearchEntryByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByEntryId">
+      <wsdl:input message="tns:SearchEntryByEntryIdSoapIn" />
+      <wsdl:output message="tns:SearchEntryByEntryIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntriesByKeywords">
+      <wsdl:input message="tns:SearchEntriesByKeywordsSoapIn" />
+      <wsdl:output message="tns:SearchEntriesByKeywordsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Support">
+      <wsdl:input message="tns:SupportSoapIn" />
+      <wsdl:output message="tns:SupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisSupport">
+      <wsdl:input message="tns:DisSupportSoapIn" />
+      <wsdl:output message="tns:DisSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <wsdl:input message="tns:EditEntrySoapIn" />
+      <wsdl:output message="tns:EditEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByName">
+      <wsdl:input message="tns:GetUserIdByNameSoapIn" />
+      <wsdl:output message="tns:GetUserIdByNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceSoap" type="tns:UserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserName">
+      <soap:operation soapAction="http://tempuri.org/ValidateUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByName">
+      <soap:operation soapAction="http://tempuri.org/SearchEntryByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByEntryId">
+      <soap:operation soapAction="http://tempuri.org/SearchEntryByEntryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntriesByKeywords">
+      <soap:operation soapAction="http://tempuri.org/SearchEntriesByKeywords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Support">
+      <soap:operation soapAction="http://tempuri.org/Support" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisSupport">
+      <soap:operation soapAction="http://tempuri.org/DisSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <soap:operation soapAction="http://tempuri.org/EditEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByName">
+      <soap:operation soapAction="http://tempuri.org/GetUserIdByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceSoap12" type="tns:UserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUserName">
+      <soap12:operation soapAction="http://tempuri.org/ValidateUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByName">
+      <soap12:operation soapAction="http://tempuri.org/SearchEntryByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntryByEntryId">
+      <soap12:operation soapAction="http://tempuri.org/SearchEntryByEntryId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEntriesByKeywords">
+      <soap12:operation soapAction="http://tempuri.org/SearchEntriesByKeywords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Support">
+      <soap12:operation soapAction="http://tempuri.org/Support" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisSupport">
+      <soap12:operation soapAction="http://tempuri.org/DisSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <soap12:operation soapAction="http://tempuri.org/EditEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByName">
+      <soap12:operation soapAction="http://tempuri.org/GetUserIdByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserServiceSoap" binding="tns:UserServiceSoap">
+      <soap:address location="http://localhost:3637/UserService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceSoap12" binding="tns:UserServiceSoap12">
+      <soap12:address location="http://localhost:3637/UserService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

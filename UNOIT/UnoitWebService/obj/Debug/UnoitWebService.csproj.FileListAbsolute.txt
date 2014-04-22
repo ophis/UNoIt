@@ -1,0 +1,13 @@
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\UnoitWebService.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\UnoitWebService.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\BLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\Model.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\DAL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\Lucene.China.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\Lucene.Net.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\BLL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\Model.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\bin\DAL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\obj\Debug\ResolveAssemblyReference.cache
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\obj\Debug\UnoitWebService.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitWebService\obj\Debug\UnoitWebService.pdb

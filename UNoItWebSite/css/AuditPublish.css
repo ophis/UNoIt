@@ -1,0 +1,263 @@
+﻿body
+{
+    background: #4e4e4e url(../images/web_bg.png) repeat-x 0 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 微软雅黑;
+}
+
+/*这个只是用来看看框子在哪里的~*/
+div
+{
+    border: 0px solid gray;
+}
+
+/*把字体设置为10号字……当初定了这个类的我脑子一定是坏掉了╮(╯_╰)╭*/
+.Set12px
+{
+    font-size: 12px;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #3e3e3e;
+}
+
+
+/*超链接的默认设置，三个伪类一定要按这个顺序放哦亲，不然不起作用哦亲~*/
+a:link
+{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #ffcc66;
+}
+
+
+/*最外面的那个框框哦亲~还不是那个白的哦亲~*/
+.Window
+{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    padding-bottom:10px;
+}
+
+.PersonNav
+{
+    height: 82px;
+    width: 876px;
+    background-image: url(../images/PersonNav.png);
+    background-repeat: no-repeat;
+    position: relative;
+    left: -76px;
+    z-index: 1000;
+    vertical-align: middle;
+}
+
+.logo
+{
+    float: left;
+    height: 50px;
+    width: 138px;
+    z-index: 100;
+}
+
+.MainDiv
+{
+    background-color: #f8f8f8; 
+    width: 782px;    
+    margin: 0 auto;
+    padding-top: 0px;
+    clear: none;
+    position: relative;
+    margin-top: -83px;
+    padding-bottom:80px;
+}
+
+
+/*很土鳖很灰主流方法实现的导航……你没看错= =全是图片*/
+.nav
+{
+
+    clear: both;
+    height: 54.47px;
+    width: 100%;
+    top: 36.5px;
+    position: relative;
+    margin: 0 auto;
+    width: 687px;
+    text-align: left;
+    background: url("../images/img_Manager/AuditImgSrc.png") no-repeat -24px -45px;
+}
+
+/*然后在图上画出来了四块儿连接╮(╯▽╰)╭*/
+.nav a
+{
+    display: inline-block;
+    width: 43px;
+    height: 55px;
+    font-size: 16pt;
+    vertical-align: middle;
+    padding-left: 23px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.tail
+{
+    background-image: url(../images/BottomImgSrc.png);
+    height: 92px ;
+    width: 423px ;
+    margin: 0 auto;
+    margin-top:-65px;   
+    position: relative;
+    z-index: 100;
+}
+
+.Bottom_Info
+{
+    font-size: 10px;
+    position: relative;
+    top: 35px;
+}
+.tail a:link
+{
+    color: #FFFFFF;
+}
+
+.tail a:visited
+{
+    color: #FFFFFF;
+}
+
+.tail a:hover
+{
+    color: #000000;
+}
+
+
+
+/*==================================以下是页面的部分了~=======================================*/
+
+.MainBody
+{
+    width: 667px;
+    margin: 0 auto;
+    margin-top: 65px;
+    background-color: #FFFFFF;
+    border: 2px solid #66cccc;
+    padding-bottom:0px;
+    float:left;
+    margin-left:55px;
+}
+
+
+.EntryDiv
+{
+    width: 457px;
+    float: left;
+    border-right: 1px dashed #99cc66;
+    margin-top: 8px;
+    margin-bottom:10px;
+    min-height:590px;
+}
+
+
+.EntryBody
+{
+    width: 424px;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+    border-top: 1px dashed #99cc66;
+    padding-bottom:30px;
+}
+
+.SmallTitle
+{
+    text-align: left;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #99cc66;
+}
+
+.Details
+{
+    text-indent:2em;
+    font-size:14px;
+    text-align:left;
+    line-height:25px;
+}
+
+
+.Check
+{
+    padding-bottom:80px;
+}
+
+.Pass
+{
+    float: right;
+    position: relative;
+    right: 10px;
+    width: 74px;
+    height: 29px;
+    margin-right:30px;
+    background-image: url(../images/img_Manager/AuditImgSrc.png);
+    background-position: -24px -138px;
+}
+
+.Pass:hover
+{
+    background-image: url(../images/img_Manager/AuditImgSrc.png);
+    background-position: -24px -171px;
+}
+
+.Reject
+{
+    float: right;
+    position: relative;
+    right: 10px;
+    width: 74px;
+    height: 29px;
+    margin-right:20px;
+    background-image: url(../images/img_Manager/AuditImgSrc.png);
+    background-position: -121px -138px;
+}
+
+.Reject:hover
+{
+    background-image: url(../images/img_Manager/AuditImgSrc.png);
+    background-position: -121px -171px;
+}
+
+/*右侧模块*/
+.EntryInfoDiv
+{
+    width: 205px;
+    height: 350px;
+    float: right;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.UserAva0
+{
+    margin: 0 auto;
+    margin-top: 0px;
+    height: 82px;
+    width: 82px;
+}
+

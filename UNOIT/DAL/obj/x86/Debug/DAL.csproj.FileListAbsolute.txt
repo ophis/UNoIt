@@ -1,0 +1,8 @@
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\bin\Debug\DAL.dll.config
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\bin\Debug\DAL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\bin\Debug\DAL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\bin\Debug\Model.dll
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\bin\Debug\Model.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\obj\x86\Debug\DAL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\DAL\obj\x86\Debug\DAL.pdb

@@ -1,0 +1,165 @@
+﻿body
+{
+    background: #4e4e4e url(../images/web_bg.png) repeat-x 0 0;
+    width:100%;
+    height:814px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 微软雅黑;
+    
+}
+
+/*这个只是用来看看框子在哪里的~*/
+div
+{
+    border:0px solid gray;
+}
+
+/*把字体设置为10号字……当初定了这个类的我脑子一定是坏掉了╮(╯_╰)╭*/
+.Set12px
+{
+    font-size: 12px;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #3e3e3e;
+}
+
+
+/*超链接的默认设置，三个伪类一定要按这个顺序放哦亲，不然不起作用哦亲~*/
+a:link
+{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #ffcc66;
+}
+
+
+/*最外面的那个框框哦亲~还不是那个白的哦亲~*/
+.Window
+{
+    height:787px;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+}
+
+.PersonNav
+{
+    height: 82px;
+    width: 876px;
+    background-image: url(../images/PersonNav.png);
+    background-repeat: no-repeat;
+    position: relative;
+    left: -76px;
+    z-index: 1000;
+    vertical-align: middle;
+}
+
+.logo
+{
+    float: left;
+    height: 50px;
+    width: 138px;
+    z-index: 100;
+}
+
+.MainDiv
+{
+    background-color: #f8f8f8;
+    height: 775px;
+    width: 782px;
+    margin: 0 auto;
+    padding-top: 0px;
+    clear: none;
+    position: relative;
+    top: -83px;
+}
+
+/*搜索这部分不要乱动，会死的……*/
+.search
+{
+    width: 100%;
+    height: 60px;
+    text-align: left;
+}
+.search > span
+{
+    display: inline-block;
+    height: 36.8px;
+    width: 322px;
+    position: relative;
+    top: 62px;
+    left: 416.53px;
+    background-image: url(../images/img_login/LoginImgSrc.png);
+    background-position: -8.5px -11.5px;
+    vertical-align: middle;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    z-index:1002;
+}
+
+.Text_Search
+{
+    margin-left: 5px;
+    margin-top: 4px;
+    height: 24.5px;
+    width: 227px;
+    border-color: #66cccc;
+    border-width: 1px;
+    vertical-align: middle;
+    font-size: 12pt;
+}
+
+
+.tail
+{
+    background-image: url(../images/BottomImgSrc.png);
+    height: 92px;
+    width: 423px;
+    margin:12px auto;
+    position: relative;
+    z-index: 100;
+    text-align:center;
+    clear:both;
+
+}
+
+.Bottom_Info
+{
+    font-size: 10px;
+    position: relative;
+    top:35px;
+}
+.tail a:link
+{
+    color: #FFFFFF;
+}
+
+.tail a:visited
+{
+    color: #FFFFFF;
+}
+
+.tail a:hover
+{
+    color: #000000;
+}
+
+.PageNav
+{
+    margin-top:10px;
+}
+

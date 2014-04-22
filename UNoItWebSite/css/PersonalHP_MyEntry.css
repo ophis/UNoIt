@@ -1,0 +1,153 @@
+﻿/*==================以下是页面的部分了~=====================*/
+.MainBody
+{
+    clear: both;
+    height: 487px;
+    width: 667px;
+    margin: 0 auto;
+    margin-top: 65px;
+}
+
+/*很土鳖很灰主流方法实现的导航……你没看错= =全是图片*/
+.nav
+{
+    clear: both;
+    height: 76.5px;
+    width: 100%;
+    top: 36.5px;
+    position: relative;
+    margin: 0 auto;
+    width: 687px;
+    text-align: left;
+    background: url("../images/img_MyZone/MyEntryImgSrc.png") no-repeat -8px -31.5px;
+}
+
+/*然后在图上画出来了两块儿连接╮(╯▽╰)╭*/
+.nav a
+{
+    display: inline-block;
+    width: 33px;
+    height: 55px;
+    font-size: 16pt;
+    vertical-align: middle;
+    padding-left: 35px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+
+
+/*个人主页中的个人资料模块*/
+.MyInfoDiv
+{
+    float: left;
+    border:1px solid #66cccc;
+    width:166px;
+    height:446px;
+}
+.MyInfoDivTitleImg
+{
+    width:166.5px; 
+    height:446px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -24px -14px ;
+}
+/*默认头像*/
+.MyInfoImg
+{
+    background-image:url("../images/img_MyZone/DefaultAva.gif");
+    width:82px;
+    height:82px;
+    margin:17px auto;
+
+}
+
+.ReleaseBtn
+{
+    float:right;
+    position:relative;
+    width:125px; 
+    height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -109.5px;
+}
+
+.Publish
+{
+    width:125px;
+    height:38px;
+    margin:12px auto;
+}
+
+.Publish a:hover
+{
+    width:125px; height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -59.5px;
+}
+
+
+/*我的词条的总div*/
+.MyEntryView
+{
+    border:1px solid #66cccc;
+    width:480px;
+    height:446px;
+    float:right;
+}
+
+
+/*ul 框框*/
+.MyEntryBody
+{
+    height: 380px;
+    width: 405px;
+    position: relative;
+    list-style: none;
+    border-top: 2px dashed #99cc67;
+    margin:55px auto;
+}
+
+/*li 框框*/
+.MyEntry
+{
+    text-align:left;
+    height: 60px;
+    width: 440px;
+    border-bottom: 1px dashed #99cc67;
+    display: block;
+    float: left;
+    padding-top: 5px;
+    margin-left:-40px ;
+}
+
+.EntryInfo
+{
+    float:right;
+    font-size:10px;
+    color:#cccccc;
+    margin:2px 5px 0 0;
+}
+
+/*词条中链接*/
+.MyEntry div a
+{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #99cc67;
+    text-decoration: underline;
+    margin-left: 15px;
+}
+
+/*词条内容*/
+.EntryBody
+{
+    width : 82%;
+    display: block;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #3e3e3e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /*这个是真的有的╮(╯▽╰)╭*/
+    margin-left: 60px;
+}

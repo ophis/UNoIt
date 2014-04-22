@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNOIT" Class="EntryHistoryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SHARP;Initial Catalog=UNOIT;Persist Security Info=True;User ID=SharpUsers" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="UNOITConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EntryHistoryView" Member="EntryHistoryView">
+    <Type Name="EntryHistoryView">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryReleasedID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryModifiedID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryEvaluationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryCommentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdministratorsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

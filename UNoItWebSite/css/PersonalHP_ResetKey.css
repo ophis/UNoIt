@@ -1,0 +1,157 @@
+﻿.MainBody
+{
+    clear: both;
+    height: 511px;
+    width: 667px;
+    margin: 0 auto;
+    margin-top: 65px;
+    background-color:#FFFFFF;
+}
+/*很土鳖很灰主流方法实现的导航……你没看错= =全是图片*/
+.nav
+{
+    clear: both;
+    height: 76.5px;
+    top: 36.5px;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    background: url("../images/img_MyZone/ResetKeyImgSrc.png") no-repeat -8px -31.5px;
+}
+
+/*然后在图上画出来了两块儿连接╮(╯▽╰)╭*/
+.nav a
+{
+
+    display: inline-block;
+    width: 33px;
+    height: 55px;
+    font-size: 16pt;
+    vertical-align: middle;
+    padding-left: 35px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+/*个人主页中的个人资料模块*/
+.MyInfoDiv
+{
+    float: left;
+    border:1px solid #66cccc;
+    width:166px;
+    height:446px;
+}
+.MyInfoDivTitleImg
+{
+    width:166.5px; 
+    height:446px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -24px -14px ;
+}
+/*默认头像*/
+.MyInfoImg
+{
+    background-image:url("../images/img_MyZone/DefaultAva.gif");
+    width:82px;
+    height:82px;
+    margin:17px auto;
+
+}
+
+.ReleaseBtn
+{
+    float:right;
+    position:relative;
+    width:125px; 
+    height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -109.5px;
+}
+
+.Publish
+{
+    width:125px;
+    height:38px;
+    margin:12px auto;
+}
+
+.Publish a:hover
+{
+    width:125px; height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -59.5px;
+}
+
+
+/*修改密码模块*/
+.EditPasswordView
+{
+    border:1px solid #66cccc;
+    width:480px;
+    height:446px;
+    float:right;
+    text-align:center;
+}
+
+/*修改密码的div*/
+.EditPassword
+{
+    height: 420px;
+    width: 450px;
+    margin:0 auto;
+    position: relative;
+    list-style: none;
+    margin-top: 56px;
+    border-top: 2px dashed #99cc67;
+   
+}
+.EditPassword p
+{
+    text-align: left; 
+    margin-left: 70px; 
+    margin-top: 0px; 
+    font-size: 14px;
+    font-weight:900;
+    color: #3e3e3e;
+}
+/*输入框*/
+.InputText
+{
+    border: 1px solid #99cc67;
+    font-size: 12pt;
+    height: 23px;
+    width: 160px;
+    margin-left:0px;
+    position:relative;
+    top:-38px;
+}
+/*确认修改按钮*/
+.ResetBtn
+{
+    background:url("../images/img_MyZone/ResetKeyImgSrc.png") no-repeat -8px -147px; 
+    width:82px; height:28px; float:left; margin-left:250px;
+}
+.ResetBtn a
+{
+    display: inline-block;
+    width:82px; height:28px;
+}
+.ResetBtn a:hover
+{
+    background:url("../images/img_MyZone/ResetKeyImgSrc.png") no-repeat -8px -181px;
+}
+
+/*取消按钮*/
+.CancelBtn
+{
+    background:url("../images/img_MyZone/ResetKeyImgSrc.png") no-repeat -161px -147px;
+    width:82px;margin-left:20px; height:28px;float:left;
+}
+
+.CancelBtn a
+{
+    display: inline-block;
+    width:82px; height:28px;
+}
+.CancelBtn a:hover
+{
+    background:url("../images/img_MyZone/ResetKeyImgSrc.png") no-repeat -161px -181px;
+}

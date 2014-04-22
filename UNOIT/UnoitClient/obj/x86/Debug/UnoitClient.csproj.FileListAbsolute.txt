@@ -1,0 +1,15 @@
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\bin\Debug\UnoitClient.exe.config
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\bin\Debug\UnoitClient.exe
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\bin\Debug\UnoitClient.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\bin\Debug\ClientBLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\bin\Debug\ClientBLL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.EditWord.resources
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.MainForm.resources
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.Login.resources
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.Properties.Resources.resources
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.Word.resources
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.exe
+F:\UNOIT - V2\UNOIT\UNOIT\UnoitClient\obj\x86\Debug\UnoitClient.pdb

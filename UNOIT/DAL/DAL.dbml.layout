@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.125, 15" name="DAL">
+  <DataContextMoniker Name="/DALDataContext" />
+  <nestedChildShapes>
+    <classShape Id="872efee2-e3b8-4d9c-84ab-933279c03418" absoluteBounds="0.75, 0.75, 2, 1.2797265625">
+      <DataClassMoniker Name="/DALDataContext/Administrators" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e71e07fb-a81d-47a8-8ae0-66160f41db6b" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fd655c7-8678-4818-af8f-a8047400c510" absoluteBounds="3.375, 2.75, 2, 1.2797265625000005">
+      <DataClassMoniker Name="/DALDataContext/Catagory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="394663a9-174b-47a8-8f17-30599297dcaf" absoluteBounds="3.39, 3.21, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01def5de-a1b3-4de5-805b-a909e19e3e95" absoluteBounds="6.5, 8.25, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/DALDataContext/Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb2d30d6-567d-4c28-8d60-7b282029bbfb" absoluteBounds="6.515, 8.71, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56e92355-bb56-46c5-b34a-892f5a843eeb" absoluteBounds="6.5, 4.75, 2, 2.6286848958333326">
+      <DataClassMoniker Name="/DALDataContext/Entry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94b9e0f9-cb5d-4b34-b952-91f8c34db60f" absoluteBounds="6.515, 5.21, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="283e28cd-c38a-44d5-9406-b1b739441dd6" absoluteBounds="9.25, 4.375, 2, 1.2797265625000005">
+      <DataClassMoniker Name="/DALDataContext/EntryKeywordMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad961cb2-03a1-4075-8d69-aa22884260b6" absoluteBounds="9.265, 4.835, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0981e8e4-9ba3-48da-86f4-e81e2903a5bc" absoluteBounds="3.5, 12.75, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/DALDataContext/EntryToBeVerified" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9311db0e-264c-402c-a795-4a74c0a180a7" absoluteBounds="3.515, 13.21, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c1ef1ba-7d70-45b0-b607-fc6d3c9d972a" absoluteBounds="9.25, 9, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/DALDataContext/Evaluation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42a4aa6e-c2fc-4d95-ad24-c789c694185e" absoluteBounds="9.265, 9.46, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e7f45e6-147c-41e9-8f35-42d98c3b52c1" absoluteBounds="6.5, 2.5, 2, 1.1111067708333335">
+      <DataClassMoniker Name="/DALDataContext/Keywords" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26b5bd54-e9fd-456a-8b71-c3775304832c" absoluteBounds="6.515, 2.96, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08d5d8c0-6cff-4288-bb6d-85e6d8a8950e" absoluteBounds="3.5, 5.75, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/DALDataContext/Notify" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85a92e16-0fdc-40f3-902a-7e792b00c382" absoluteBounds="3.515, 6.21, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12100841-f2c1-435c-a020-fc42cd111cec" absoluteBounds="3.5, 10.375, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/DALDataContext/Prosecution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3d7c51e-1259-4648-b73f-b10e397d7745" absoluteBounds="3.515, 10.835, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" absoluteBounds="0.75, 7.375, 2, 3.4717838541666666">
+      <DataClassMoniker Name="/DALDataContext/Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="037b1d71-b8d0-496f-9bb9-be0f714dda00" absoluteBounds="0.765, 7.835, 1.9700000000000002, 2.9117838541666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 7.37868489583333); (7.5 : 8.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Entry/Entry_Comment" />
+      <nodes>
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+        <classShapeMoniker Id="01def5de-a1b3-4de5-805b-a909e19e3e95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.40625 : 4.0297265625); (3.40625 : 5.08593625); (6.5 : 5.08593625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Catagory/Catagory_Entry" />
+      <nodes>
+        <classShapeMoniker Id="0fd655c7-8678-4818-af8f-a8047400c510" />
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 5.20236328125); (9.25 : 5.20236328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Entry/Entry_EntryKeywordMenu" />
+      <nodes>
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+        <classShapeMoniker Id="283e28cd-c38a-44d5-9406-b1b739441dd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 7.37868489583333); (8.875 : 7.75368489583333); (8.875 : 9.72417317708333); (9.25 : 9.72417317708333)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DALDataContext/Entry/Entry_Evaluation" />
+      <nodes>
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+        <classShapeMoniker Id="1c1ef1ba-7d70-45b0-b607-fc6d3c9d972a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 3.05555338541667); (10.25 : 3.05555338541667); (10.25 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Keywords/Keywords_EntryKeywordMenu" />
+      <nodes>
+        <classShapeMoniker Id="7e7f45e6-147c-41e9-8f35-42d98c3b52c1" />
+        <classShapeMoniker Id="283e28cd-c38a-44d5-9406-b1b739441dd6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.05848307291667); (6.5 : 9.05848307291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_Comment" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="01def5de-a1b3-4de5-805b-a909e19e3e95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.48437375 : 7.375); (1.48437375 : 5.4843775); (6.5 : 5.4843775)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_Entry" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 10.8467838541667); (1.75 : 13.7271028645833); (3.5 : 13.7271028645833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_EntryToBeVerified" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="0981e8e4-9ba3-48da-86f4-e81e2903a5bc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.1209830729167); (9.25 : 10.1209830729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_Evaluation" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="1c1ef1ba-7d70-45b0-b607-fc6d3c9d972a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 7.375); (2.2812525 : 6.47417317708333); (3.5 : 6.47417317708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_Notify" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="08d5d8c0-6cff-4288-bb6d-85e6d8a8950e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3c6c50c-ac9b-4a62-b6ef-f5c6e3450fde" absoluteBounds="0.75, 2.75, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/DALDataContext/Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59659e59-d276-4c5e-bbb1-ad0049333e8c" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9dadc4f-5be6-4b6f-b8a1-066269b4f0c4" absoluteBounds="9.875, 6.875, 2, 1.2797265625">
+      <DataClassMoniker Name="/DALDataContext/EntryModifiedHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc559018-80bd-42e2-8213-f876d6feadb7" absoluteBounds="9.89, 7.335, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 7.09558994791667); (9.875 : 7.09558994791667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DALDataContext/Entry/Entry_EntryModifiedHistory" />
+      <nodes>
+        <classShapeMoniker Id="56e92355-bb56-46c5-b34a-892f5a843eeb" />
+        <classShapeMoniker Id="f9dadc4f-5be6-4b6f-b8a1-066269b4f0c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.79795572916667); (7.41666666666667 : 7.79795572916667 : JumpStart); (7.58333333333333 : 7.79795572916667 : JumpEnd); (9.875 : 7.79795572916667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DALDataContext/Users/Users_EntryModifiedHistory" />
+      <nodes>
+        <classShapeMoniker Id="d9fec67e-b4a3-477f-be11-dc31c4cfad55" />
+        <classShapeMoniker Id="f9dadc4f-5be6-4b6f-b8a1-066269b4f0c4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

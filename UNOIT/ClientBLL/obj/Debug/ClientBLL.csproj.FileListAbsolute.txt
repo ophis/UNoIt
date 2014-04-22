@@ -1,0 +1,6 @@
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\bin\Debug\ClientBLL.dll.config
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\bin\Debug\ClientBLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\bin\Debug\ClientBLL.pdb
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\obj\Debug\ResolveAssemblyReference.cache
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\obj\Debug\ClientBLL.dll
+F:\UNOIT - V2\UNOIT\UNOIT\ClientBLL\obj\Debug\ClientBLL.pdb

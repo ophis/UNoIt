@@ -1,0 +1,153 @@
+﻿/*==================以下是页面的部分了~=====================*/
+.MainBody
+{
+    clear: both;
+    height: 487px;
+    width: 667px;
+    margin: 0 auto;
+    margin-top: 65px;
+}
+
+/*很土鳖很灰主流方法实现的导航……你没看错= =全是图片*/
+.nav
+{
+    clear: both;
+    height: 76.5px;
+    width: 100%;
+    top: 36.5px;
+    position: relative;
+    margin: 0 auto;
+    width: 687px;
+    text-align: left;
+    background: url("../images/img_MyZone/MessageImgSrc.png") no-repeat -8px -31.5px;
+}
+
+/*然后在图上画出来了两块儿连接╮(╯▽╰)╭*/
+.nav a
+{
+
+    display: inline-block;
+    width: 33px;
+    height: 55px;
+    font-size: 16pt;
+    vertical-align: middle;
+    padding-left: 35px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+/*个人主页中的个人资料模块*/
+.MyInfoDiv
+{
+    float: left;
+    border:1px solid #66cccc;
+    width:166px;
+    height:446px;
+}
+.MyInfoDivTitleImg
+{
+    width:166.5px; 
+    height:446px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -24px -14px ;
+}
+/*默认头像*/
+.MyInfoImg
+{
+    background-image:url("../images/img_MyZone/DefaultAva.gif");
+    width:82px;
+    height:82px;
+    margin:17px auto;
+
+}
+
+.ReleaseBtn
+{
+    float:right;
+    position:relative;
+    width:125px; 
+    height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -109.5px;
+}
+
+.Publish
+{
+    width:125px;
+    height:38px;
+    margin:12px auto;
+}
+
+.Publish a:hover
+{
+    width:125px; height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -59.5px;
+}
+
+
+/*我的邮箱的总div*/
+.MessageView
+{
+    border:1px solid #66cccc;
+    width:480px;
+    height:446px;
+    float:right;
+}
+
+
+/*ul 框框*/
+.MyMessageBody
+{
+    height: 420px;
+    width: 480px;
+    position: relative;
+    top: -15px;
+    left: -42px;
+    list-style: none;
+}
+
+/*li 框框*/
+.Message
+{
+    text-align:left;
+    height: 90px;
+    width: 450px;
+    border-bottom: 1px dashed #99cc67;
+    display: block;
+    float: left;
+    padding-top: 10px;
+    margin-left:15px;
+}
+
+/*邮箱中链接*/
+.Message div a
+{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+.Messagelogo
+{
+    margin-left:15px;
+    margin-top:7px;
+    float:left; 
+    width:59px; 
+    height:63px;
+    background:url("../images/img_MyZone/MessageImgSrc.png") no-repeat -8px -140px;    
+}
+
+/*邮件内容*/
+.MessageBody
+{
+    margin-top:20px;
+    width : 93%;
+    display: block;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #3e3e3e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /*这个是真的有的╮(╯▽╰)╭*/
+    padding-left: 15px;
+}

@@ -1,0 +1,154 @@
+﻿
+.MainBody
+{
+    clear: both;
+    height: 511px;
+    width: 667px;
+    margin: 0 auto;
+    margin-top: 65px;
+    
+}
+
+/*很土鳖很灰主流方法实现的导航……你没看错= =全是图片*/
+.nav
+{
+    clear: both;
+    height: 76.5px;
+    width: 100%;
+    top: 36.5px;
+    position: relative;
+    width: 687px;
+    text-align: left;
+    background: url("../images/img_MyZone/MyCommentImgSrc.png") no-repeat -8px -31.5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/*然后在图上画出来了两块儿连接╮(╯▽╰)╭*/
+.nav a
+{
+    display: inline-block;
+    width: 33px;
+    height: 55px;
+    font-size: 16pt;
+    vertical-align: middle;
+    padding-left: 35px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+/*个人主页中的个人资料模块*/
+.MyInfoDiv
+{
+    float: left;
+    border:1px solid #66cccc;
+    width:166px;
+    height:446px;
+}
+.MyInfoDivTitleImg
+{
+    width:166.5px; 
+    height:446px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -24px -14px ;
+}
+/*默认头像*/
+.MyInfoImg
+{
+    background-image:url("../images/img_MyZone/DefaultAva.gif");
+    width:82px;
+    height:82px;
+    margin:17px auto;
+
+}
+
+.ReleaseBtn
+{
+    float:right;
+    position:relative;
+    width:125px; 
+    height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -109.5px;
+}
+
+.Publish
+{
+    width:125px;
+    height:38px;
+    margin:12px auto;
+}
+
+.Publish a:hover
+{
+    width:125px; height:38px; 
+    background:url("../images/img_MyZone/MyInfoImgSrc.png") no-repeat -23px -59.5px;
+}
+
+
+/*我的评论的总div*/
+.MyCommentView
+{
+    border:1px solid #66cccc;
+    width:480px;
+    height:446px;
+    float:right;
+}
+
+/*ul 框框*/
+.MyCommentList
+{
+    height: 420px;
+    width: 480px;
+    position: relative;
+    top: -15px;
+    left: -42px;
+    list-style: none;
+}
+
+/*li 框框*/
+.MyComment
+{
+    height: 30px;
+    width: 450px;
+    border-bottom: 1px dashed #99cc67;
+    display: block;
+    float: left;
+    padding-top: 5px;
+    margin-left:15px;
+}
+/*词条名称的链接*/
+.MyCommentList div .leftTitle
+{ 
+    float:left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px; margin-right:130px; 
+}
+
+.MyCommentList div .rightTitle
+{
+    float:right;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 130px; margin-right:20px;
+}
+
+.MyCommentList div .left
+{ 
+    float:left;
+    text-decoration:underline;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px; 
+    margin-top:2px;
+}
+
+/*最后回复的链接*/
+.MyCommentList div .right
+{
+    float:right;
+    font-size: 14px;
+    margin-right:20px;
+    margin-top:2px;
+}
